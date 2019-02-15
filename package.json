@@ -10,6 +10,7 @@
     "test:ci": "ng build ui-kit && ng test ui-kit-panel --no-watch --no-progress --browsers=ChromeHeadlessCI",
     "test:ui-kit": "ng test ui-kit",
     "test:ci:ui-kit": "ng test ui-kit --no-watch --no-progress --browsers=ChromeHeadlessCI",
+    "publish": "npm publish dist/ui-kit",
     "lint": "ng lint",
     "e2e": "ng e2e"
   },
