@@ -1,0 +1,20 @@
+.modal-title {
+  position: relative;
+  text-align: center;
+
+  &__title, &__subtitle {
+    margin-bottom: 16px;
+  }
+
+  &__backward {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  &__exit {
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+}

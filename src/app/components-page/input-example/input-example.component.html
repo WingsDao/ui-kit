@@ -1,0 +1,25 @@
+<h1 class="page__title page-block__title ws-h1">Input fields</h1>
+<ws-demo
+  code='<ws-input label="Some label" message="Normal message" type="text" [(value)]="value"></ws-input>'
+>
+  <ws-input label="Some label" message="Normal message" type="text" [(value)]="value"></ws-input>
+  <br>
+  value: <code>{{value}}</code>
+</ws-demo>
+
+<ws-demo
+  code='<ws-input [disabled]="true" label="Dont allow to text here" disabled></ws-input>'
+>
+  <ws-input [disabled]="true" [label]="'Disabled input'" disabled></ws-input>
+</ws-demo>
+
+<ws-demo
+  code='<ws-input [error]="true" [label]="Enter right text here" [message]="Error message" ></ws-input>'
+>
+  <ws-input [error]="true" [label]="'Enter right text here'" [message]="'Error message'" ></ws-input>
+</ws-demo>
+
+
+
+
+

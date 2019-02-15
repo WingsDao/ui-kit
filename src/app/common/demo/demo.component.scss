@@ -1,0 +1,21 @@
+.example {
+  margin: 40px 0;
+  background: #FFFFFF;
+  border: 1px solid #F7F7F7;
+  box-sizing: border-box;
+  border-radius: 6px;
+  overflow: hidden;
+
+  &__demo {
+    padding: 40px 24px;
+    overflow-x: auto;
+  }
+
+  &__html {
+    background: #FAFAFA;
+    padding: 0 14px 5px;
+    overflow-x: auto;
+  }
+}
+
+

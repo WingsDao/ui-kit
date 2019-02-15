@@ -1,0 +1,24 @@
+  <div class="menu__logo-nav mobile" >
+    <div class="burger-menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <img class="menu__logo-img" src="/assets/svg/pen-color.svg" alt="logo">
+  </div>
+  <div class="menu menu-navigation">
+    <a [routerLink]="buildRoute(ROUTING.Home)" class="menu__logo">
+      <img class="menu__logo-img" src="/assets/svg/pen-color.svg" alt="logo" />
+    </a>
+  <ul class="menu__inner">
+    <li class="menu__item" routerLinkActive="menu__item-active"><a [routerLink]="buildRoute(ROUTING.GettingStarted)">Getting Started</a></li>
+    <li class="menu__item" routerLinkActive="menu__item-active"><a [routerLink]="buildRoute(ROUTING.Components)">Components</a></li>
+    <li class="menu__item" routerLinkActive="menu__item-active"><a [routerLink]="buildRoute(ROUTING.Palettes)">Palettes</a></li>
+    <li class="menu__item" routerLinkActive="menu__item-active"><a [routerLink]="buildRoute(ROUTING.Typography)">Typography</a></li>
+    <li class="menu__item" routerLinkActive="menu__item-active"><a [routerLink]="buildRoute(ROUTING.Brand)">Brand</a></li>
+  </ul>
+  <div class="menu__footer copyright ws-text-xs">
+    <div class="footer">Project by <a href="http://wings.ai" class="footer_link">Wings.ai</a></div>
+    © 2019 WINGS. <br />All rights reserved.
+  </div>
+  </div>

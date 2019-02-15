@@ -1,0 +1,7 @@
+<label class="radio-item ws-text-s">
+  <input type="radio" [name]="name" [value]="value" [ngModel]="selected" (ngModelChange)="setSelected($event)">
+  <span class="checkmark"></span>
+  <span>
+    <ng-content></ng-content>
+  </span>
+</label>

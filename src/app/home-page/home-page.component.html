@@ -1,0 +1,60 @@
+<div class="page page-main">
+  <div class="page__logo"><img src="/assets/svg/pen-img.svg" alt="logo" /></div>
+  <h1 class="page__title ws-h1">Feather design system</h1>
+  <h3 class="page__subtitle ws-text-l">
+    Use Feather design system to create straightforward and beautiful user
+    experiences on WINGS platform.
+  </h3>
+  <a
+    [routerLink]="buildRoute(ROUTING.GettingStarted)"
+    class="getstarted-button">
+    Getting started
+  </a>
+  <div class="page__navigation">
+    <a [routerLink]="buildRoute(ROUTING.Components)" class="navigation__item">
+      <div class="navigation__item-number">1</div>
+      <div class="navigation__item-logo">
+        <img src="/assets/svg/menu-components.svg" alt="" />
+      </div>
+      <div class="navigation__item-title">Components</div>
+      <div class="navigation__item-text ws-text-s">
+        A set of components and live demos which helps you to build the
+        interface.
+      </div>
+    </a>
+    <a [routerLink]="buildRoute(ROUTING.Palettes)" class="navigation__item">
+      <div class="navigation__item-number">2</div>
+      <div class="navigation__item-logo">
+        <img src="/assets/svg/menu-palletes.svg" alt="" />
+      </div>
+      <div class="navigation__item-title">Our Palettes</div>
+      <div class="navigation__item-text ws-text-s">
+        A full up-to-date color set is available in our repository.
+      </div>
+    </a>
+    <a [routerLink]="buildRoute(ROUTING.Typography)" class="navigation__item">
+      <div class="navigation__item-number">3</div>
+      <div class="navigation__item-logo">
+        <img src="/assets/svg/menu-typography.svg" alt="" />
+      </div>
+      <div class="navigation__item-title">Typography</div>
+      <div class="navigation__item-text ws-text-s">
+        Our Interfaces are 80% text based, so you've got to use fonts wisly.
+      </div>
+    </a>
+    <a [routerLink]="buildRoute(ROUTING.Brand)" class="navigation__item">
+      <div class="navigation__item-number">4</div>
+      <div class="navigation__item-logo">
+        <img src="/assets/svg/menu-brand.svg" alt="" />
+      </div>
+      <div class="navigation__item-title">Brand</div>
+      <div class="navigation__item-text ws-text-s">
+        Our logos and how to use them appropriately.
+      </div>
+    </a>
+  </div>
+  <div class="page__footer">
+    Project by Wings.ai
+    <span class="copyright">© 2018 WINGS. All rights reserved</span>
+  </div>
+</div>

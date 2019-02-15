@@ -1,0 +1,17 @@
+.modal {
+  width: 700px;
+  padding: 52px;
+  box-shadow: 0px 20px 40px rgba(105, 115, 125, 0.1);
+  border-radius: 12px;
+}
+
+.modal__content {
+  background: var(--ws-gray-light);
+  height: 150px;
+  margin-bottom: 16px;
+}
+
+.modal__button /deep/ button{
+  display: block;
+  margin: 0 auto;
+}

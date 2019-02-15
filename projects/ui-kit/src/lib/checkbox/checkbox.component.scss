@@ -1,0 +1,40 @@
+label {
+  position: relative;
+  cursor: pointer;
+}
+
+input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  height: 100%;
+  width: 100%;
+  cursor: pointer;
+}
+
+.checkbox {
+  width: 24px;
+  height: 24px;
+  display: inline-block;
+  vertical-align: bottom;
+  margin-right: 8px;
+  background: var(--ws-white);
+  border: 1px solid var(--ws-gray-light);
+  box-sizing: border-box;
+  border-radius: 6px;
+
+  input:hover ~ & {
+    border: 1px solid var(--ws-blue-light);
+  }
+
+  input:checked + & {
+    background: url("../../assets/svg/check.svg"), var(--ws-blue);
+    border-color: var(--ws-blue);
+    -webkit-background-size: 14px 10px;
+    background-size: 14px 10px;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+}
+

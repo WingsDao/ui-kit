@@ -1,0 +1,29 @@
+.footer {
+  height: 100px;
+  background: #FFFFFF;
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.05);
+  padding: 24px 32px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.bottom-nav__item {
+  display: inline-block;
+  text-decoration: none;
+  color: #222222;
+  line-height: 32px;
+  font-size: 12px;
+  margin-right: 16px;
+  font-weight: 800;
+
+  &:hover {
+    color: var(--ws-blue-light);
+  }
+}
+
+.copyright {
+  line-height: 32px;
+  font-size: 12px;
+  color: var(--ws-gray-dark);
+}

@@ -1,0 +1,135 @@
+.page-main {
+  background: url(./../../assets/svg/feather.svg), #00b3dc;
+  background-repeat: no-repeat;
+  background-position: 100% -120px;
+  text-align: center;
+  color: white;
+  padding-top: 70px;
+  padding-bottom: 25px;
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+
+.page__logo {
+  margin-bottom: 32px;
+}
+
+.page__title {
+  margin-bottom: 17px;
+}
+
+.page__subtitle,
+.page__title {
+   color: #fff;
+ }
+
+.getstarted-button {
+  display: inline-block;
+  box-sizing: border-box;
+  margin: 35px auto 0;
+  padding: 0 70px;
+  border: 1px solid var(--ws-white);
+  border-radius: 6px;
+  line-height: 60px;
+  text-decoration: none;
+  color: white;
+}
+
+.getstarted-button:hover {
+  color: var(--ws-black);
+  background: var(--ws-white);
+  font-weight: 800;
+}
+
+.page__navigation {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 17px;
+  max-width: 780px;
+  margin: 50px auto;
+}
+
+.navigation__item {
+  width: 100%;
+  height: 185px;
+  box-sizing: border-box;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  grid-template-rows: 55px 40px 1fr;
+  text-align: left;
+  background: var(--ws-white);
+  box-shadow: 0 7px 6px rgba(60, 130, 160, 0.0637738);
+  border-radius: 5px;
+  padding: 25px 30px 16px;
+  text-decoration: none;
+  transition: all 0.3s;
+
+  &:hover {
+    transform: scale(1.03);
+
+    & .navigation__item-title {
+      color: var(--ws-blue-dark);
+    }
+  }
+}
+
+.navigation__item-number {
+  font-style: normal;
+  font-weight: 800;
+  line-height: 32px;
+  font-size: 24px;
+  color: var(--ws-gray-light);
+}
+
+.navigation__item-title {
+  width: 100%;
+  font-style: normal;
+  font-weight: 800;
+  line-height: 36px;
+  font-size: 24px;
+  color: var(--ws-black);
+}
+
+.navigation__item-text,
+.navigation__item-title {
+  grid-column-start: 1;
+  grid-column-end: 4;
+}
+
+.navigation__item-text,
+.page__text {
+  max-width: 238px;
+}
+
+.page__footer {
+  font-style: normal;
+  font-weight: bold;
+  line-height: 32px;
+  font-size: 14px;
+}
+
+.copyright {
+  display: block;
+  font: inherit;
+  font-weight: normal;
+  line-height: 16px;
+  font-size: 12px;
+  margin-top: 5px;
+}
+
+@media screen and (max-width: 800px) {
+  .page-main {
+    padding: 30px 5%;
+  }
+
+  .page__navigation {
+    grid-template-columns: 1fr;
+  }
+
+  .page__title {
+    font-size: 32px;
+  }
+  .navigation__item {
+    height: initial;
+  }
+}

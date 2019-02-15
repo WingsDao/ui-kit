@@ -1,0 +1,56 @@
+button {
+  height: 60px;
+  width: 240px;
+  border-radius: 6px;
+  padding: 20px;
+  background: var(--ws-blue);
+  border: none;
+  font-size: 14px;
+  color: var(--ws-white);
+  cursor: pointer;
+
+  &:hover {
+    background: var(--ws-blue-light);
+  }
+
+  &:active {
+    outline: none;
+    background: var(--ws-blue-dark);
+  }
+
+  &:focus {
+    outline: none;
+  }
+}
+
+button.disabled {
+  background: var(--ws-gray-light);
+  color: var(--ws-gray-dark);
+}
+
+button.loading {
+  background-color: var(--ws-blue);
+  background-image: url('../../assets/svg/spinner_white.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 24px;
+}
+
+:host[ghost] {
+  button {
+    background: transparent;
+    border: 1px solid var(--ws-blue);
+    box-sizing: border-box;
+    color: var(--ws-blue);
+
+    &:hover {
+      background: #E6F7FB;
+    }
+
+    &:active {
+      border: 1px solid var(--ws-blue-dark);
+      color: var(--ws-blue-dark);
+    }
+  }
+}
+

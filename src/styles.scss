@@ -1,1 +1,100 @@
 /* You can add global styles to this file, and also import other style files */
+
+body {
+	margin: 0;
+	padding: 0;
+}
+
+html, body {
+  font-family: "Nunito Sans", 'Open Sans', sans-serif;
+}
+
+.mobile {
+  display: none;
+}
+
+.page-block {
+  padding: 105px 52px 90px 212px;
+  position: fixed;
+  overflow-y: scroll;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 240px;
+}
+
+.page__content {
+  max-width: 600px;
+}
+
+.page__title {
+  margin-bottom: 17px;
+}
+
+.page__subheader {
+  margin-top: 60px;
+  margin-bottom: 15px;
+}
+
+.page-block__title {
+  margin-top: 0;
+  margin-bottom: 32px;
+}
+
+.page__subtitle {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.page__text {
+  max-width: 238px;
+}
+
+.page-block__text {
+  max-width: 100%;
+  margin-top: 25px;
+}
+
+/* scrollbar */
+::-webkit-scrollbar {
+  width: 2px;
+  height: 2px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--ws-gray-light);
+  opacity: 0.5;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #222222;
+  cursor: pointer;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--ws-blue-light);
+}
+
+@media screen and (max-width: 800px) {
+  .page-block {
+    position: absolute;
+    left: 0;
+    background: var(--ws-white);
+    overflow: auto;
+  }
+
+  .page-block {
+    padding: 105px 7% 90px;
+  }
+
+  .navigation-back {
+    display: block;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 50px;
+    font-size: 16px;
+    color: var(--ws-blue-light);
+    margin-bottom: 15px;
+    cursor: pointer;
+  }
+}

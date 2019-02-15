@@ -1,0 +1,33 @@
+.radio-item {
+  position: relative;
+  display: block;
+  cursor: pointer;
+  margin-bottom: 16px;
+
+&:hover input ~ .checkmark {
+    border: 1px solid var(--ws-blue-light);
+  }
+
+  & input:checked ~ .checkmark {
+    border: 6px solid var(--ws-blue-light);
+  }
+}
+
+.checkmark {
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+  vertical-align: middle;
+  border: 1px solid var(--ws-gray-light);
+  border-radius: 50%;
+  margin-right: 8px;
+  box-sizing: border-box;
+}
+
+.radio-item input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+}
+

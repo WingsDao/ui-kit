@@ -1,0 +1,46 @@
+.logo-item {
+  width: 50%;
+  display: inline-block;
+  height: 300px;
+  margin: 45px 0 70px;
+
+
+  &-color{
+    background: url(/assets/svg/menu-brand.svg), #ECFBFF;
+    background-size: 102px;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  &-white {
+    background: url(/assets/svg/logo-white.svg), #364069;
+    background-size: 102px;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+}
+
+.blue-btn {
+  width: 225px;
+  border-radius: 6px;
+  background-color: var(--ws-blue);
+  color: var(--ws-white);
+  border: none;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 60px;
+  cursor: pointer;
+  display: block;
+  text-decoration: none;
+  text-align: center;
+
+
+  &:hover {
+    background-color: var(--ws-blue-light);
+    &:active {
+      background-color: var(--ws-blue-dark);
+    }
+  }
+}
+
+

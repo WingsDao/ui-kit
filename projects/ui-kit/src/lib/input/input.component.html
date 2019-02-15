@@ -1,0 +1,12 @@
+<label class="input-item">
+  <input
+    [type]="type"
+    [ngClass]="{'error': error, 'disabled': disabled, 'not-empty': !!value}"
+    [disabled]="disabled"
+    class="ws-text-s"
+    [ngModel]="value"
+    (ngModelChange)="value = $event"/>
+  <span class="label ws-text-xs" >{{label}}</span>
+  <span class="message ws-text-xs">{{message}}</span>
+</label>
+

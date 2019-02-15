@@ -1,0 +1,5 @@
+<button [disabled]="disabled" [class.disabled]="disabled" [class.loading]="loading">
+  <ng-container *ngIf="!loading">
+    <ng-content ></ng-content>
+  </ng-container>
+</button>

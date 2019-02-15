@@ -1,0 +1,46 @@
+:root {
+  .ws-h1 {
+    font-weight: 800;
+    line-height: 60px;
+    font-size: 48px;
+    color: var(--ws-black);
+  }
+  .ws-h2 {
+    font-weight: 800;
+    line-height: 40px;
+    font-size: 32px;
+    color: var(--ws-black);
+  }
+
+  .ws-h3 {
+    font-weight: 800;
+    line-height: 32px;
+    font-size: 24px;
+    color: var(--ws-black);
+  }
+
+  .ws-text-l {
+    font-weight: normal;
+    line-height: 28px;
+    font-size: 20px;
+    color: var(--ws-gray-dark);
+  }
+  .ws-text-m {
+    font-weight: 300;
+    line-height: 28px;
+    font-size: 16px;
+    color: var(--ws-black);
+  }
+  .ws-text-s {
+    font-weight: 300;
+    line-height: 24px;
+    font-size: 14px;
+    color: var(--ws-black);
+  }
+  .ws-text-xs {
+    font-weight: normal;
+    line-height: 20px;
+    font-size: 12px;
+    color: var(---ws-black);
+  }
+}
