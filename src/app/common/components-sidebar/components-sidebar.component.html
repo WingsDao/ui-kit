@@ -1,0 +1,28 @@
+<div class="menu menu-components">
+    <div class="navigation-back mobile" (click)="back.emit()">Back</div>
+    <div class="menu__title menu__item">Atoms</div>
+    <ul class="menu__inner">
+      <li class="menu__item" routerLinkActive="menu__item-active"><a [routerLink]="buildRoute(ROUTING.Input)">Input fields</a></li>
+      <li class="menu__item" routerLinkActive="menu__item-active"><a [routerLink]="buildRoute(ROUTING.Button)">Button</a></li>
+      <li class="menu__item" routerLinkActive="menu__item-active"><a [routerLink]="buildRoute(ROUTING.Checkbox)">Checkbox</a></li>
+      <li class="menu__item" routerLinkActive="menu__item-active"><a [routerLink]="buildRoute(ROUTING.Tabs)">Tabs</a></li>
+      <li class="menu__item" routerLinkActive="menu__item-active"><a [routerLink]="buildRoute(ROUTING.Switch)">Switch</a></li>
+      <li class="menu__item" routerLinkActive="menu__item-active"><a [routerLink]="buildRoute(ROUTING.Transaction)">Transaction</a></li>
+      <li class="menu__item" routerLinkActive="menu__item-active"><a [routerLink]="buildRoute(ROUTING.Radio)">Radio</a></li>
+      <li class="menu__item" routerLinkActive="menu__item-active"><a [routerLink]="buildRoute(ROUTING.RadioButton)">Radio button</a></li>
+      <li class="menu__item" routerLinkActive="menu__item-active"><a [routerLink]="buildRoute(ROUTING.Icon)">Icons</a></li>
+      <li class="menu__item" routerLinkActive="menu__item-active"><a [routerLink]="buildRoute(ROUTING.Help)">Help</a></li>
+    </ul>
+  <div class="menu__title menu__item">Molecules</div>
+  <ul class="menu__inner">
+    <li class="menu__item" routerLinkActive="menu__item-active"><a [routerLink]="ROUTING.Searchbar">Searchbar</a></li>
+    <li class="menu__item" routerLinkActive="menu__item-active"><a [routerLink]="ROUTING.Table">Table</a></li>
+    <li class="menu__item" routerLinkActive="menu__item-active"><a [routerLink]="ROUTING.HeaderNavigation">Header</a></li>
+    <li class="menu__item" routerLinkActive="menu__item-active"><a [routerLink]="ROUTING.Footer">Footer</a></li>
+    <li class="menu__item" routerLinkActive="menu__item-active"><a [routerLink]="ROUTING.Title">Title</a></li>
+  </ul>
+  <div class="menu__title menu__item">Organisms</div>
+  <ul class="menu__inner">
+    <li class="menu__item" routerLinkActive="menu__item-active"><a [routerLink]="ROUTING.Modal">Modal</a></li>
+  </ul>
+  </div>

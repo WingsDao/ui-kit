@@ -3,7 +3,6 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
 import { AppCommonModule } from '../common/common.module';
 import { ComponentsPageComponent } from './components-page.component';
-import { ComponentsSidebarComponent } from './components-sidebar/components-sidebar.component';
 
 describe('ComponentsPageComponent', () => {
   let component: ComponentsPageComponent;
@@ -11,7 +10,7 @@ describe('ComponentsPageComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ ComponentsPageComponent, ComponentsSidebarComponent ],
+      declarations: [ ComponentsPageComponent ],
       imports: [AppCommonModule, RouterTestingModule]
     })
     .compileComponents();

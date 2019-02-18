@@ -5,9 +5,10 @@ import { UiKitModule } from 'ui-kit';
 import { DemoComponent } from './demo/demo.component';
 import { PageComponent } from './page/page.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
+import { ComponentsSidebarComponent } from './components-sidebar/components-sidebar.component';
 
 @NgModule({
-  declarations: [PageComponent, SidebarComponent, DemoComponent],
+  declarations: [PageComponent, SidebarComponent, DemoComponent, ComponentsSidebarComponent],
   imports: [
     CommonModule,
     RouterModule,
@@ -15,7 +16,8 @@ import { SidebarComponent } from './sidebar/sidebar.component';
   ],
   exports: [
     PageComponent,
-    DemoComponent
+    DemoComponent,
+    ComponentsSidebarComponent
   ]
 })
 export class AppCommonModule { }

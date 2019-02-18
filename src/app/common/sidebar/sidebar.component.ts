@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { untilDestroyed } from 'ngx-take-until-destroy';
 import { AppRouting } from '../../../enums/routing.enum';
 
 @Component({
@@ -6,11 +8,27 @@ import { AppRouting } from '../../../enums/routing.enum';
   templateUrl: './sidebar.component.html',
   styleUrls: ['./sidebar.component.scss']
 })
-export class SidebarComponent implements OnInit {
-  ROUTING = AppRouting;
-  constructor() {}
+export class SidebarComponent implements OnInit, OnDestroy {
 
-  ngOnInit() {
+  ROUTING = AppRouting;
+  visible = false;
+  isMainMenuVisible = false;
+  isComponentsMenuVisible = false;
+
+  constructor(private router: Router) {}
+
+  ngOnDestroy(): void {}
+
+  ngOnInit(): void {
+    this.router.events
+      .pipe(untilDestroyed(this))
+      .subscribe(() => this.setVisibility());
+  }
+
+  setVisibility(visible = false, isMainMenuVisible = false, isComponentsMenuVisible = false) {
+    this.visible = visible;
+    this.isMainMenuVisible = isMainMenuVisible;
+    this.isComponentsMenuVisible = isComponentsMenuVisible;
   }
 
   buildRoute(routing: AppRouting) {

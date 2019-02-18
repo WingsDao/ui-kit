@@ -1,24 +1,50 @@
-  <div class="menu__logo-nav mobile" >
-    <div class="burger-menu">
-      <span></span>
-      <span></span>
-      <span></span>
-    </div>
-    <img class="menu__logo-img" src="/assets/svg/pen-color.svg" alt="logo">
+<div class="menu__logo-nav mobile">
+  <div
+    class="burger-menu"
+    (click)="setVisibility(!visible, !visible, false)"
+    [class.burger-menu--open]="visible"
+  >
+    <span></span>
+    <span></span>
+    <span></span>
   </div>
-  <div class="menu menu-navigation">
-    <a [routerLink]="buildRoute(ROUTING.Home)" class="menu__logo">
-      <img class="menu__logo-img" src="/assets/svg/pen-color.svg" alt="logo" />
-    </a>
+  <img class="menu__logo-img" src="/assets/svg/pen-color.svg" alt="logo" />
+</div>
+<div class="menu menu-navigation" [class.visible]="isMainMenuVisible">
+  <a [routerLink]="buildRoute(ROUTING.Home)" class="menu__logo">
+    <img class="menu__logo-img" src="/assets/svg/pen-color.svg" alt="logo" />
+  </a>
   <ul class="menu__inner">
-    <li class="menu__item" routerLinkActive="menu__item-active"><a [routerLink]="buildRoute(ROUTING.GettingStarted)">Getting Started</a></li>
-    <li class="menu__item" routerLinkActive="menu__item-active"><a [routerLink]="buildRoute(ROUTING.Components)">Components</a></li>
-    <li class="menu__item" routerLinkActive="menu__item-active"><a [routerLink]="buildRoute(ROUTING.Palettes)">Palettes</a></li>
-    <li class="menu__item" routerLinkActive="menu__item-active"><a [routerLink]="buildRoute(ROUTING.Typography)">Typography</a></li>
-    <li class="menu__item" routerLinkActive="menu__item-active"><a [routerLink]="buildRoute(ROUTING.Brand)">Brand</a></li>
+    <li class="menu__item" routerLinkActive="menu__item-active">
+      <a [routerLink]="buildRoute(ROUTING.GettingStarted)">Getting Started</a>
+    </li>
+    <li class="menu__item not-mobile" routerLinkActive="menu__item-active">
+      <a [routerLink]="buildRoute(ROUTING.Components)">Components</a>
+    </li>
+    <li class="menu__item mobile" routerLinkActive="menu__item-active">
+      <a (click)="setVisibility(true, false, true)">Components</a>
+    </li>
+    <li class="menu__item" routerLinkActive="menu__item-active">
+      <a [routerLink]="buildRoute(ROUTING.Palettes)">Palettes</a>
+    </li>
+    <li class="menu__item" routerLinkActive="menu__item-active">
+      <a [routerLink]="buildRoute(ROUTING.Typography)">Typography</a>
+    </li>
+    <li class="menu__item" routerLinkActive="menu__item-active">
+      <a [routerLink]="buildRoute(ROUTING.Brand)">Brand</a>
+    </li>
   </ul>
   <div class="menu__footer copyright ws-text-xs">
-    <div class="footer">Project by <a href="http://wings.ai" class="footer_link">Wings.ai</a></div>
+    <div class="footer">
+      Project by <a href="http://wings.ai" class="footer_link">Wings.ai</a>
+    </div>
     © 2019 WINGS. <br />All rights reserved.
   </div>
-  </div>
+</div>
+<ws-components-sidebar
+  class="mobile"
+  *ngIf="isComponentsMenuVisible"
+  [baseUrl]="buildRoute(ROUTING.Components) + '/'"
+  (back)="setVisibility(true, true, false)"
+></ws-components-sidebar>
+

@@ -6,7 +6,6 @@ import { AppCommonModule } from '../common/common.module';
 import { ButtonExampleComponent } from './button-example/button-example.component';
 import { CheckboxExampleComponent } from './checkbox-example/checkbox-example.component';
 import { ComponentsPageComponent } from './components-page.component';
-import { ComponentsSidebarComponent } from './components-sidebar/components-sidebar.component';
 import { HelpExampleComponent } from './help-example/help-example.component';
 import { IconExampleComponent } from './icon-example/icon-example.component';
 import { InputExampleComponent } from './input-example/input-example.component';
@@ -26,7 +25,6 @@ import { ModalExampleComponent } from './modal-example/modal-example.component';
 @NgModule({
   declarations: [
     ComponentsPageComponent,
-    ComponentsSidebarComponent,
     InputExampleComponent,
     ButtonExampleComponent,
     CheckboxExampleComponent,

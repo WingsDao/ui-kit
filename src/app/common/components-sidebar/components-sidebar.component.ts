@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { ComponentsRouting } from '../../../enums/routing.enum';
 
 @Component({
@@ -6,10 +6,12 @@ import { ComponentsRouting } from '../../../enums/routing.enum';
   templateUrl: './components-sidebar.component.html',
   styleUrls: ['./components-sidebar.component.scss']
 })
-export class ComponentsSidebarComponent implements OnInit {
+export class ComponentsSidebarComponent {
   ROUTING = ComponentsRouting;
-  constructor() { }
+  @Input() baseUrl = '';
+  @Output() back = new EventEmitter();
 
-  ngOnInit() {
+  buildRoute(route: ComponentsRouting) {
+    return this.baseUrl + route;
   }
 }

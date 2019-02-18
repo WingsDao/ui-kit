@@ -1,11 +1,12 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Location } from '@angular/common';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'ws-page',
   template: `
     <ws-sidebar></ws-sidebar>
     <div class="page page-block">
-      <div class="navigation-back mobile">Back</div>
+      <div class="navigation-back mobile" (click)="back()">Back</div>
       <div class="page__content">
         <h1 *ngIf="title" class="page__title page-block__title ws-h1">{{title}}</h1>
         <ng-content></ng-content>
@@ -14,9 +15,11 @@ import { Component, Input, OnInit } from '@angular/core';
   `,
   styleUrls: ['./page.component.scss']
 })
-export class PageComponent implements OnInit {
+export class PageComponent {
   @Input() title?: string;
-  constructor() {}
+  constructor(private location: Location) {}
 
-  ngOnInit() {}
+  back() {
+    this.location.back();
+  }
 }
