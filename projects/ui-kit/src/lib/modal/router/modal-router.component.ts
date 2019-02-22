@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, QueryList, ContentChildren, ViewContainerRef, ElementRef } from '@angular/core';
+import { Component, OnInit, Input, QueryList, ContentChildren, ViewContainerRef, ElementRef, AfterViewInit } from '@angular/core';
 import { ModalComponent } from '../modal.component';
 
 @Component({
@@ -6,15 +6,30 @@ import { ModalComponent } from '../modal.component';
   templateUrl: './modal-router.component.html',
   styleUrls: ['./modal-router.component.scss']
 })
-export class ModalRouterComponent implements OnInit {
+export class ModalRouterComponent implements AfterViewInit {
+  private _selected: string;
+  get selected(): string {
+    return this._selected;
+  }
+  @Input()
+  set selected(value: string) {
+    this._selected = value;
+    this.navigate(this._selected);
+    console.log(this._selected);
+  }
+
   @Input() visible: boolean;
-  @Input() active: string;
 
   @ContentChildren(ModalComponent) private modals: QueryList<ModalComponent>;
 
   constructor() { }
 
-  ngOnInit() {
+  ngAfterViewInit(): void {
+    setTimeout(() => this.initialize());
+  }
+
+  private initialize() {
+    this.navigate(this._selected);
   }
 
   public open() {
@@ -23,8 +38,8 @@ export class ModalRouterComponent implements OnInit {
     if (!this.modals) {
       return;
     }
-    const activeModal = this.getModal(this.active) || this.modals.first;
-    this.hideAllModals();
+    const activeModal = this.modals.find(modal => modal.name === this.selected) || this.modals.first;
+    this.hideAll();
     activeModal.hidden = false;
   }
 
@@ -34,26 +49,23 @@ export class ModalRouterComponent implements OnInit {
     if (!this.modals) {
       return;
     }
-    this.hideAllModals();
+    this.hideAll();
   }
 
   public navigate(name: string) {
     if (!this.modals) {
       return;
     }
-    const activeModal = this.getModal(name);
+    const activeModal = this.modals.find(modal => modal.name === name);
     if (!activeModal) {
       throw new Error(`Modal with name=${name} not found.`);
     }
-    this.hideAllModals();
+
+    this.hideAll();
     activeModal.hidden = false;
   }
 
-  private getModal(name: string) {
-    return this.modals.find(modal => modal.name === name);
-  }
-
-  private hideAllModals() {
+  private hideAll() {
     this.modals.forEach(modal => modal.hidden = true);
   }
 }

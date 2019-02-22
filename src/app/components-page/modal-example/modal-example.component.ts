@@ -5,4 +5,7 @@ import { Component } from '@angular/core';
   templateUrl: './modal-example.component.html',
   styleUrls: ['./modal-example.component.scss']
 })
-export class ModalExampleComponent {}
+export class ModalExampleComponent {
+  selectedRoute = 'first';
+  isRouteVisible = false;
+}
