@@ -6,11 +6,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./table.component.scss']
 })
 export class TableComponent implements OnInit {
-
   isCheckedOne = false;
   isCheckedTwo = false;
   isFilterChecked = false;
-
 
   constructor() { }
 
@@ -19,19 +17,15 @@ export class TableComponent implements OnInit {
 
   onCheck() {
 
-    if(!this.isFilterChecked) {
+    if (!this.isFilterChecked) {
       this.isFilterChecked = false;
       this.isCheckedOne = false;
       this.isCheckedTwo = false;
-    }
-    else {
+    } else {
       this.isFilterChecked = true;
       this.isCheckedOne = true;
       this.isCheckedTwo = true;
     }
-
-
   }
-
 }
 

@@ -6,15 +6,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./searchbar.component.scss']
 })
 export class SearchbarComponent implements OnInit {
+  searchValue: string = null;
 
   constructor() { }
 
-  ngOnInit() {
-  }
+  ngOnInit() {}
 
-  searchValue:string = null;
   onClick() {
     this.searchValue = '';
   }
-
 }
