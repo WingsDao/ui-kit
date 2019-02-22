@@ -11,6 +11,10 @@ export class TabsComponent implements AfterContentInit {
 
   // contentChildren are set
   ngAfterContentInit() {
+    setTimeout(() => this.initialize());
+  }
+
+  private initialize() {
     // get all active tabs
     const activeTabs = this.tabs.filter(tab => tab.active);
 
@@ -20,7 +24,10 @@ export class TabsComponent implements AfterContentInit {
     }
   }
 
-  selectTab(tab: TabComponent) {
+  selectTab(tab?: TabComponent) {
+    if (!tab) {
+      return;
+    }
     // deactivate all tabs
     this.tabs.toArray().forEach(item => item.active = false);
 

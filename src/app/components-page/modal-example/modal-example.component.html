@@ -1,7 +1,7 @@
 <h1 class="page__title page-block__title ws-h1">Modal</h1>
 
 <ws-demo
-  code="
+  html="
   <ws-modal>
     <ws-modal-header title='Title'>
       some sub title
@@ -20,7 +20,7 @@
 </ws-demo>
 
 <ws-demo
-  code='
+  html='
   <ws-modal>
     <ws-modal-header title="Title" (back)="onBack()" (close)="onClose()">
       some sub title
@@ -39,7 +39,7 @@
 </ws-demo>
 
 <ws-demo
-  code='
+  html='
   <ws-button (click)="router.open()">Open Modal</ws-button>
   <ws-modal-router #router>
     <ws-modal>
@@ -69,12 +69,10 @@
   </ws-modal-router>
 </ws-demo>
 
-<ws-demo
-  code=''
->
+<ws-demo>
   <p>Modal with router</p>
   <ws-button (click)="router2.open()">Open Modal</ws-button>
-  <ws-modal-router #router2 [active]="first">
+  <ws-modal-router #router2>
     <ws-modal name="first">
       <ws-modal-header
         title="Modal 1"

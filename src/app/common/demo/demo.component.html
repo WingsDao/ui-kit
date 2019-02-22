@@ -6,10 +6,17 @@
     </div>
     <div class="example__code">
       <ws-tabs>
-        <ws-tab [tabTitle]="title">
+        <ws-tab tabTitle="HTML" *ngIf="html">
           <div class="example__html">
-            <pre [innerText]="'\n'+code+'\n'">
-              {{code}}
+            <pre [innerText]="'\n'+html+'\n'">
+              {{html}}
+            </pre>
+          </div>
+        </ws-tab>
+        <ws-tab tabTitle="TS" *ngIf="ts">
+          <div class="example__html">
+            <pre [innerText]="'\n'+ts+'\n'">
+              {{ts}}
             </pre>
           </div>
         </ws-tab>
