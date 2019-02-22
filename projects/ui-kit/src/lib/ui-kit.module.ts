@@ -72,7 +72,8 @@ import { ModalRouterComponent } from './modal/router/modal-router.component';
     HeaderNavigationComponent,
     FooterComponent,
     ModalHeaderComponent,
-    ModalComponent
+    ModalComponent,
+    ModalRouterComponent
   ],
 })
 export class UiKitModule { }

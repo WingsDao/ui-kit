@@ -139,7 +139,7 @@
       "root": "projects/ui-kit",
       "sourceRoot": "projects/ui-kit/src",
       "projectType": "library",
-      "prefix": "lib",
+      "prefix": "ws",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-ng-packagr:build",

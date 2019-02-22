@@ -1,13 +1,16 @@
 <h1 class="page__title page-block__title ws-h1">Modal</h1>
 
-<ws-demo code="
+<ws-demo
+  code="
   <ws-modal>
     <ws-modal-header title='Title'>
       some sub title
     </ws-modal-header>
     Modal Content
   </ws-modal>
-">
+"
+>
+  <p>Basic Modal</p>
   <ws-modal>
     <ws-modal-header title="Title">
       some sub title
@@ -16,18 +19,83 @@
   </ws-modal>
 </ws-demo>
 
-<ws-demo code='
+<ws-demo
+  code='
   <ws-modal>
     <ws-modal-header title="Title" (back)="onBack()" (close)="onClose()">
       some sub title
     </ws-modal-header>
     Modal with header buttons
   </ws-modal>
-'>
+'
+>
+  <p>Modal with header buttons</p>
+  <ws-modal>
+    <ws-modal-header title="Title" (back)="onBack()" (close)="onClose()">
+      some sub title
+    </ws-modal-header>
+    Modal with header buttons
+  </ws-modal>
+</ws-demo>
+
+<ws-demo
+  code='
+  <ws-button (click)="router.open()">Open Modal</ws-button>
+  <ws-modal-router #router>
     <ws-modal>
-      <ws-modal-header title="Title" (back)="onBack()" (close)="onClose()">
+      <ws-modal-header
+        title="Title"
+        (close)="router.close()"
+      >
         some sub title
       </ws-modal-header>
       Modal with header buttons
     </ws-modal>
+  </ws-modal-router>
+'
+>
+  <p>Modal with router</p>
+  <ws-button (click)="router.open()">Open Modal</ws-button>
+  <ws-modal-router #router>
+    <ws-modal>
+      <ws-modal-header
+        title="Title"
+        (close)="router.close()"
+      >
+        some sub title
+      </ws-modal-header>
+      Modal with header buttons
+    </ws-modal>
+  </ws-modal-router>
+</ws-demo>
+
+<ws-demo
+  code=''
+>
+  <p>Modal with router</p>
+  <ws-button (click)="router2.open()">Open Modal</ws-button>
+  <ws-modal-router #router2 [active]="first">
+    <ws-modal name="first">
+      <ws-modal-header
+        title="Modal 1"
+        (close)="router2.close()"
+      >
+        some sub title
+      </ws-modal-header>
+        Modal 1 content
+        <div>
+          <ws-button (click)="router2.navigate('second')">Next screen</ws-button>
+        </div>
+    </ws-modal>
+    <ws-modal name="second">
+        <ws-modal-header
+          title="Modal 2"
+          (back)="router2.navigate('first')"
+          (close)="router2.close()"
+        >
+          some sub title
+        </ws-modal-header>
+        Modal 2 content
+      </ws-modal>
+  </ws-modal-router>
 </ws-demo>
