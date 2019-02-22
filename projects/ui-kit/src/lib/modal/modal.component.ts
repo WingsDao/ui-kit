@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'ws-modal',
@@ -6,10 +6,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./modal.component.scss']
 })
 export class ModalComponent implements OnInit {
-
-  constructor() { }
-
+  @Output() back = new EventEmitter();
+  @Output() close = new EventEmitter();
+  showBackBtn = false;
+  showCloseBtn = false;
   ngOnInit() {
+    this.showBackBtn = this.back.observers.length > 0;
+    this.showCloseBtn = this.close.observers.length > 0;
   }
-
 }

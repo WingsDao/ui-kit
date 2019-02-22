@@ -14,7 +14,6 @@ import { SwitchExampleComponent } from './components-page/switch-example/switch-
 import { TabsExampleComponent } from './components-page/tabs-example/tabs-example.component';
 import { SearchbarExampleComponent } from './components-page/searchbar-example/searchbar-example.component';
 import { TableExampleComponent } from './components-page/table-example/table-example.component';
-import { ModalTitleExampleComponent } from './components-page/modal-title-example/modal-title-example.component';
 import { ModalExampleComponent } from './components-page/modal-example/modal-example.component';
 import { TransactionExampleComponent } from './components-page/transaction-example/transaction-example.component';
 import { FooterExampleComponent } from './components-page/footer-example/footer-example.component';
@@ -40,7 +39,6 @@ const CHILD_ROUTES: Routes = [
   {path: ComponentsRouting.Table, component: TableExampleComponent},
   {path: ComponentsRouting.HeaderNavigation, component: HeaderNavigationExampleComponent},
   {path: ComponentsRouting.Footer, component: FooterExampleComponent},
-  {path: ComponentsRouting.Title, component: ModalTitleExampleComponent},
   {path: ComponentsRouting.Modal, component: ModalExampleComponent},
 ];
 

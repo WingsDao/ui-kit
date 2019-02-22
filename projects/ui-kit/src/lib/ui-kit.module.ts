@@ -19,8 +19,8 @@ import { SearchbarComponent } from './searchbar/searchbar.component';
 import { TableComponent } from './table/table.component';
 import { HeaderNavigationComponent } from './header-navigation/header-navigation.component';
 import { FooterComponent } from './footer/footer.component';
-import { ModalTitleComponent } from './modal-title/modal-title.component';
 import { ModalComponent } from './modal/modal.component';
+import { ModalHeaderComponent } from './modal/header/modal-header.component';
 
 
 @NgModule({
@@ -43,7 +43,7 @@ import { ModalComponent } from './modal/modal.component';
     TableComponent,
     HeaderNavigationComponent,
     FooterComponent,
-    ModalTitleComponent,
+    ModalHeaderComponent,
     ModalComponent
   ],
   imports: [
@@ -69,7 +69,7 @@ import { ModalComponent } from './modal/modal.component';
     TableComponent,
     HeaderNavigationComponent,
     FooterComponent,
-    ModalTitleComponent,
+    ModalHeaderComponent,
     ModalComponent
   ],
 })

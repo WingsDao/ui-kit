@@ -18,7 +18,6 @@ import { SearchbarExampleComponent } from './searchbar-example/searchbar-example
 import { TableExampleComponent } from './table-example/table-example.component';
 import { HeaderNavigationExampleComponent } from './header-navigation-example/header-navigation-example.component';
 import { FooterExampleComponent } from './footer-example/footer-example.component';
-import { ModalTitleExampleComponent } from './modal-title-example/modal-title-example.component';
 import { ModalExampleComponent } from './modal-example/modal-example.component';
 
 
@@ -39,7 +38,6 @@ import { ModalExampleComponent } from './modal-example/modal-example.component';
     TableExampleComponent,
     HeaderNavigationExampleComponent,
     FooterExampleComponent,
-    ModalTitleExampleComponent,
     ModalExampleComponent],
   imports: [
     CommonModule,

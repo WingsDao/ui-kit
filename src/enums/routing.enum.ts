@@ -22,6 +22,5 @@ export enum ComponentsRouting {
   Table = 'table',
   HeaderNavigation = 'header-navigation',
   Footer = 'footer',
-  Title = 'title',
   Modal = 'modal'
 }
