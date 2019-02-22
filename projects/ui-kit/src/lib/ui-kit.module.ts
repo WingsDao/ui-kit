@@ -21,6 +21,7 @@ import { HeaderNavigationComponent } from './header-navigation/header-navigation
 import { FooterComponent } from './footer/footer.component';
 import { ModalComponent } from './modal/modal.component';
 import { ModalHeaderComponent } from './modal/header/modal-header.component';
+import { ModalRouterComponent } from './modal/router/modal-router.component';
 
 
 @NgModule({
@@ -44,7 +45,8 @@ import { ModalHeaderComponent } from './modal/header/modal-header.component';
     HeaderNavigationComponent,
     FooterComponent,
     ModalHeaderComponent,
-    ModalComponent
+    ModalComponent,
+    ModalRouterComponent
   ],
   imports: [
     CommonModule,

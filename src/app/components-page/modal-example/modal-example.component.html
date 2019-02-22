@@ -1,34 +1,33 @@
 <h1 class="page__title page-block__title ws-h1">Modal</h1>
-<ws-demo code="<ws-modal>Modal Content</ws-modal>">
-  <ws-modal>Modal Content</ws-modal>
+
+<ws-demo code="
+  <ws-modal>
+    <ws-modal-header title='Title'>
+      some sub title
+    </ws-modal-header>
+    Modal Content
+  </ws-modal>
+">
+  <ws-modal>
+    <ws-modal-header title="Title">
+      some sub title
+    </ws-modal-header>
+    Modal Content
+  </ws-modal>
 </ws-demo>
 
-<ws-demo
-  code="
-  <ws-modal
-    (back)=&quot;alert('back')&quot;
-    (close)=&quot;alert('lose')&quot;
-  >
-    Modal with header buttons
-  </ws-modal>"
->
-  <ws-modal (back)="alert('back')" (close)="alert('close')">
+<ws-demo code='
+  <ws-modal>
+    <ws-modal-header title="Title" (back)="onBack()" (close)="onClose()">
+      some sub title
+    </ws-modal-header>
     Modal with header buttons
   </ws-modal>
+'>
+    <ws-modal>
+      <ws-modal-header title="Title" (back)="onBack()" (close)="onClose()">
+        some sub title
+      </ws-modal-header>
+      Modal with header buttons
+    </ws-modal>
 </ws-demo>
-
-<!-- <ws-modal-router #router [active]=[one]>
-  <ws-modal route="one">
-      initial info
-      <button (click)="#router.navigate('two')"></button>
-  </ws-modal>
-  <ws-modal
-    #modal
-    (back)="#router.navigate('one')"
-    (close)="modal.close()"
-    title=""
-    route="two"
-  >
-      content
-  </ws-modal>
-</ws-modal-router> -->

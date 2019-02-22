@@ -2,6 +2,7 @@
   <ws-icon
     class="modal-header__backward"
     *ngIf="showBackBtn"
+    (click)="back.emit()"
   >
     <svg
       width="10"
@@ -18,11 +19,16 @@
       />
     </svg>
   </ws-icon>
-  <div class="modal-header__title ws-h2">Title</div>
-  <div class="modal-header__subtitle ws-text-m"><ng-content></ng-content></div>
+  <div class="modal-header__title ws-h2">
+    {{ title }}
+  </div>
+  <div class="modal-header__subtitle ws-text-m">
+    <ng-content></ng-content>
+  </div>
   <ws-icon
     class="modal-header__exit"
     *ngIf="showCloseBtn"
+    (click)="close.emit()"
   >
     <svg
       width="16"
