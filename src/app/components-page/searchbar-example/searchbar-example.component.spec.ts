@@ -1,6 +1,8 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { UiKitModule } from 'ui-kit';
 
 import { SearchbarExampleComponent } from './searchbar-example.component';
+import { DemoComponent } from '../../common/demo/demo.component';
 
 describe('SearchbarExampleComponent', () => {
   let component: SearchbarExampleComponent;
@@ -8,7 +10,8 @@ describe('SearchbarExampleComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ SearchbarExampleComponent ]
+      declarations: [ SearchbarExampleComponent, DemoComponent ],
+      imports: [UiKitModule]
     })
     .compileComponents();
   }));
