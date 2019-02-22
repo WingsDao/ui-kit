@@ -1,23 +1,23 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { UiKitModule } from 'ui-kit';
 
-import { SearchbarExampleComponent } from './searchbar-example.component';
+import { SearchExampleComponent } from './search-example.component';
 import { DemoComponent } from '../../common/demo/demo.component';
 
-describe('SearchbarExampleComponent', () => {
-  let component: SearchbarExampleComponent;
-  let fixture: ComponentFixture<SearchbarExampleComponent>;
+describe('SearchExampleComponent', () => {
+  let component: SearchExampleComponent;
+  let fixture: ComponentFixture<SearchExampleComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ SearchbarExampleComponent, DemoComponent ],
+      declarations: [ SearchExampleComponent, DemoComponent ],
       imports: [UiKitModule]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(SearchbarExampleComponent);
+    fixture = TestBed.createComponent(SearchExampleComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

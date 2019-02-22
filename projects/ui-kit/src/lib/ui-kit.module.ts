@@ -15,7 +15,7 @@ import { SwitchComponent } from './switch/switch.component';
 import { TabComponent } from './tabs/tab/tab.component';
 import { TabsComponent } from './tabs/tabs.component';
 import { TransactionComponent } from './transaction/transaction.component';
-import { SearchbarComponent } from './searchbar/searchbar.component';
+import { SearchComponent } from './search/search.component';
 import { TableComponent } from './table/table.component';
 import { HeaderNavigationComponent } from './header-navigation/header-navigation.component';
 import { FooterComponent } from './footer/footer.component';
@@ -40,7 +40,7 @@ import { ModalRouterComponent } from './modal/router/modal-router.component';
     HelpComponent,
     RadioGroupComponent,
     RadioButtonGroupComponent,
-    SearchbarComponent,
+    SearchComponent,
     TableComponent,
     HeaderNavigationComponent,
     FooterComponent,
@@ -67,7 +67,7 @@ import { ModalRouterComponent } from './modal/router/modal-router.component';
     RadioComponent,
     IconComponent,
     HelpComponent,
-    SearchbarComponent,
+    SearchComponent,
     TableComponent,
     HeaderNavigationComponent,
     FooterComponent,

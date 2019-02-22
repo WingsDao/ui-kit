@@ -14,7 +14,7 @@ import { RadioExampleComponent } from './radio-example/radio-example.component';
 import { SwitchExampleComponent } from './switch-example/switch-example.component';
 import { TabsExampleComponent } from './tabs-example/tabs-example.component';
 import { TransactionExampleComponent } from './transaction-example/transaction-example.component';
-import { SearchbarExampleComponent } from './searchbar-example/searchbar-example.component';
+import { SearchExampleComponent } from './search-example/search-example.component';
 import { TableExampleComponent } from './table-example/table-example.component';
 import { HeaderNavigationExampleComponent } from './header-navigation-example/header-navigation-example.component';
 import { FooterExampleComponent } from './footer-example/footer-example.component';
@@ -34,7 +34,7 @@ import { ModalExampleComponent } from './modal-example/modal-example.component';
     RadioExampleComponent,
     IconExampleComponent,
     HelpExampleComponent,
-    SearchbarExampleComponent,
+    SearchExampleComponent,
     TableExampleComponent,
     HeaderNavigationExampleComponent,
     FooterExampleComponent,
