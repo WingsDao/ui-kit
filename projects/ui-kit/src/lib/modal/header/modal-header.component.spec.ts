@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { ModalHeaderComponent } from './modal-header.component';
+import { IconComponent } from '../../icon/icon.component';
 
 describe('ModalHeaderComponent', () => {
   let component: ModalHeaderComponent;
@@ -8,7 +9,7 @@ describe('ModalHeaderComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ ModalHeaderComponent ]
+      declarations: [ ModalHeaderComponent, IconComponent ]
     })
     .compileComponents();
   }));
