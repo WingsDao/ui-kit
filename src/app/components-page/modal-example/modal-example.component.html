@@ -155,7 +155,10 @@
   </ws-modal-router>
 '
   ts='
-  ...
+  @Component({
+    selector: "example",
+    templateUrl: "./example.component.html",
+  })
   class ExampleComponent {
     selectedRoute = "first";
     isRouteVisible = false;

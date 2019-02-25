@@ -1,5 +1,8 @@
 /* You can add global styles to this file, and also import other style files */
 
+// see https://www.npmjs.com/package/@ngx-prism/core
+@import '~prismjs/themes/prism-tomorrow.css';
+
 body {
 	margin: 0;
 	padding: 0;

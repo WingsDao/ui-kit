@@ -8,16 +8,16 @@
       <ws-tabs>
         <ws-tab tabTitle="HTML" *ngIf="html">
           <div class="example__html">
-            <pre [innerText]="'\n'+html+'\n'">
+            <ngx-prism [language]="'html'">
               {{html}}
-            </pre>
+            </ngx-prism>
           </div>
         </ws-tab>
         <ws-tab tabTitle="TS" *ngIf="ts">
           <div class="example__html">
-            <pre [innerText]="'\n'+ts+'\n'">
+            <ngx-prism [language]="'javascript'">
               {{ts}}
-            </pre>
+            </ngx-prism>
           </div>
         </ws-tab>
       </ws-tabs>
