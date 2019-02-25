@@ -1,25 +1,17 @@
-
-
 <div class="example">
-    <div class="example__demo">
-      <ng-content></ng-content>
-    </div>
-    <div class="example__code">
-      <ws-tabs>
-        <ws-tab tabTitle="HTML" *ngIf="html">
-          <div class="example__html">
-            <ngx-prism [language]="'html'">
-              {{html}}
-            </ngx-prism>
-          </div>
-        </ws-tab>
-        <ws-tab tabTitle="TS" *ngIf="ts">
-          <div class="example__html">
-            <ngx-prism [language]="'javascript'">
-              {{ts}}
-            </ngx-prism>
-          </div>
-        </ws-tab>
-      </ws-tabs>
-    </div>
+  <div class="example__demo">
+    <ng-content></ng-content>
   </div>
+  <ws-tabs>
+    <ws-tab tabTitle="HTML" *ngIf="html">
+      <ngx-prism [language]="'html'">
+        {{ html }}
+      </ngx-prism>
+    </ws-tab>
+    <ws-tab tabTitle="TS" *ngIf="ts">
+      <ngx-prism [language]="'javascript'">
+        {{ ts }}
+      </ngx-prism>
+    </ws-tab>
+  </ws-tabs>
+</div>
