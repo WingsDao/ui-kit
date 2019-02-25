@@ -37,7 +37,6 @@ Deploy prod:
     NAMESPACE: mainnet
     K8S_DEPLOY_CONFIGNAME_LIST: 41_ui-kit.yaml
     SITE_DOMAIN: design.wings.ai
-    SITE_SSL: wingsai-tls-secret
     REPLICAS: 2
   extends: .deploy-mainnet
   environment:
@@ -53,7 +52,6 @@ Deploy test:
     NAMESPACE: default
     K8S_DEPLOY_CONFIGNAME_LIST: 41_ui-kit.yaml
     SITE_DOMAIN: ui.wings.toys
-    SITE_SSL: wingstoys-tls-secret
     REPLICAS: 1
   extends: .only-repo
   stage: deploy
@@ -63,7 +61,9 @@ Deploy test:
   environment:
     name: test_ui-kit
   script:
-    - k8s-deploy.sh
+    - k8s-deploy.sh delete
+    - sleep 7
+    - k8s-deploy.sh apply
     - wait_deployed.sh "${CONTAINER_NAME}-ui-kit" "${WAIT_DEPLOYMENTS}"
   dependencies:
     - Build
