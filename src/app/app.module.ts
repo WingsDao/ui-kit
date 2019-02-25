@@ -13,6 +13,7 @@ import { GettingStartedPageComponent } from './getting-started-page/getting-star
 import { HomePageComponent } from './home-page/home-page.component';
 import { PalettesPageComponent } from './palettes-page/palettes-page.component';
 import { TypographyPageComponent } from './typography-page/typography-page.component';
+import { DemoModule } from './common/demo/demo.module';
 
 
 @NgModule({
@@ -31,7 +32,8 @@ import { TypographyPageComponent } from './typography-page/typography-page.compo
     BrowserModule,
     UiKitModule,
     ComponentsPageModule,
-    AppCommonModule
+    AppCommonModule,
+    DemoModule
   ],
   providers: [],
   bootstrap: [AppComponent]

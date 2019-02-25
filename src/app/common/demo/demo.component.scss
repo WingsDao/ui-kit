@@ -7,14 +7,12 @@
   overflow: hidden;
 
   &__demo {
-    padding: 40px 24px;
+    padding: 20px;
     overflow-x: auto;
   }
 
-  &__html {
-    background: #FAFAFA;
-    padding: 0 14px 5px;
-    overflow-x: auto;
+  & ngx-prism {
+    font-size: 13px;
   }
 }
 

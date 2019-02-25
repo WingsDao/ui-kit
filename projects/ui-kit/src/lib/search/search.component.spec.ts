@@ -1,20 +1,22 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { FormsModule } from '@angular/forms';
 
-import { ModalTitleExampleComponent } from './modal-title-example.component';
+import { SearchComponent } from './search.component';
 
-describe('ModalTitleExampleComponent', () => {
-  let component: ModalTitleExampleComponent;
-  let fixture: ComponentFixture<ModalTitleExampleComponent>;
+describe('SearchComponent', () => {
+  let component: SearchComponent;
+  let fixture: ComponentFixture<SearchComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ ModalTitleExampleComponent ]
+      declarations: [ SearchComponent ],
+      imports: [FormsModule]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(ModalTitleExampleComponent);
+    fixture = TestBed.createComponent(SearchComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

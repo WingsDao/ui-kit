@@ -3,6 +3,7 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { AppModule } from '../../app.module';
 import { AppCommonModule } from '../common.module';
 import { PageComponent } from './page.component';
+import { DemoModule } from '../demo/demo.module';
 
 describe('PageComponent', () => {
   let component: PageComponent;
@@ -10,7 +11,7 @@ describe('PageComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      imports: [AppCommonModule, AppModule]
+      imports: [AppCommonModule, AppModule, DemoModule]
     })
     .compileComponents();
   }));

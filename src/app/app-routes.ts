@@ -12,9 +12,8 @@ import { RadioButtonExampleComponent } from './components-page/radio-button-exam
 import { RadioExampleComponent } from './components-page/radio-example/radio-example.component';
 import { SwitchExampleComponent } from './components-page/switch-example/switch-example.component';
 import { TabsExampleComponent } from './components-page/tabs-example/tabs-example.component';
-import { SearchbarExampleComponent } from './components-page/searchbar-example/searchbar-example.component';
+import { SearchExampleComponent } from './components-page/search-example/search-example.component';
 import { TableExampleComponent } from './components-page/table-example/table-example.component';
-import { ModalTitleExampleComponent } from './components-page/modal-title-example/modal-title-example.component';
 import { ModalExampleComponent } from './components-page/modal-example/modal-example.component';
 import { TransactionExampleComponent } from './components-page/transaction-example/transaction-example.component';
 import { FooterExampleComponent } from './components-page/footer-example/footer-example.component';
@@ -36,11 +35,10 @@ const CHILD_ROUTES: Routes = [
   {path: ComponentsRouting.Radio, component: RadioExampleComponent},
   {path: ComponentsRouting.Icon, component: IconExampleComponent},
   {path: ComponentsRouting.Help, component: HelpExampleComponent},
-  {path: ComponentsRouting.Searchbar, component: SearchbarExampleComponent},
+  {path: ComponentsRouting.Search, component: SearchExampleComponent},
   {path: ComponentsRouting.Table, component: TableExampleComponent},
   {path: ComponentsRouting.HeaderNavigation, component: HeaderNavigationExampleComponent},
   {path: ComponentsRouting.Footer, component: FooterExampleComponent},
-  {path: ComponentsRouting.Title, component: ModalTitleExampleComponent},
   {path: ComponentsRouting.Modal, component: ModalExampleComponent},
 ];
 

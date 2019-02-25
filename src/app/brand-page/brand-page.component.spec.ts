@@ -1,10 +1,9 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-import { RouterTestingModule } from '@angular/router/testing';
 
-import { APP_ROUTES } from '../app-routes';
 import { AppModule } from '../app.module';
 import { AppCommonModule } from '../common/common.module';
 import { BrandPageComponent } from './brand-page.component';
+import { DemoModule } from '../common/demo/demo.module';
 
 describe('BrandPageComponent', () => {
   let component: BrandPageComponent;
@@ -12,7 +11,7 @@ describe('BrandPageComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      imports: [AppCommonModule, AppModule]
+      imports: [AppCommonModule, AppModule, DemoModule]
     })
     .compileComponents();
   }));

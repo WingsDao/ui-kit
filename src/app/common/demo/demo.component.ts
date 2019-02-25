@@ -6,6 +6,6 @@ import { Component, Input, OnInit } from '@angular/core';
   styleUrls: ['./demo.component.scss']
 })
 export class DemoComponent {
-  @Input() code: string;
-  @Input() title = 'HTML';
+  @Input() html: string;
+  @Input() ts: string;
 }

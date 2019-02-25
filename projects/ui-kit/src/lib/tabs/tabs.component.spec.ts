@@ -1,5 +1,5 @@
 import { Component, DebugElement } from '@angular/core';
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { async, ComponentFixture, TestBed, tick, fakeAsync } from '@angular/core/testing';
 
 import { By } from '@angular/platform-browser';
 import { TabComponent } from './tab/tab.component';
@@ -26,13 +26,13 @@ describe('TabsComponent', () => {
     for (let i = 0; i < tabs.length; ++i) {
       const debugElement = tabs[i];
       const tab: TabComponent = debugElement.componentInstance;
-      const hiddenAttribute = debugElement.query(By.css('div')).nativeElement.hasAttribute('hidden');
+      const isHidden = debugElement.query(By.css('div')).nativeElement.hasAttribute('hidden');
       if (i === tabIndex) {
         expect(tab.active).toBeTruthy();
-        expect(hiddenAttribute).toBe(false);
+        expect(isHidden).toBe(false);
       } else {
         expect(tab.active).toBeFalsy(`${i} tab`);
-        expect(hiddenAttribute).toBe(true);
+        expect(isHidden).toBe(true);
       }
     }
   }
@@ -57,8 +57,8 @@ describe('TabsComponent', () => {
     expect(tabs.length).toBe(3);
   });
 
-  it('should be selected 1st ws-tab by default', () => {
-    onlyTabSelected(0);
+  it('should be selected 1st ws-tab by default', async () => {
+    fixture.whenStable().then(() => onlyTabSelected(0));
   });
 
   it('should select 2nd ws-tab on tabTitle click', () => {

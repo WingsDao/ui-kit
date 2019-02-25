@@ -18,10 +18,9 @@ export enum ComponentsRouting {
   Radio = 'radio',
   Icon = 'icon',
   Help = 'help',
-  Searchbar = 'searchbar',
+  Search = 'search',
   Table = 'table',
   HeaderNavigation = 'header-navigation',
   Footer = 'footer',
-  Title = 'title',
   Modal = 'modal'
 }

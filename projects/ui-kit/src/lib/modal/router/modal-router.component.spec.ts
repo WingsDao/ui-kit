@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { SearchbarExampleComponent } from './searchbar-example.component';
+import { ModalRouterComponent } from './modal-router.component';
 
-describe('SearchbarExampleComponent', () => {
-  let component: SearchbarExampleComponent;
-  let fixture: ComponentFixture<SearchbarExampleComponent>;
+describe('ModalRouterComponent', () => {
+  let component: ModalRouterComponent;
+  let fixture: ComponentFixture<ModalRouterComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ SearchbarExampleComponent ]
+      declarations: [ ModalRouterComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(SearchbarExampleComponent);
+    fixture = TestBed.createComponent(ModalRouterComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

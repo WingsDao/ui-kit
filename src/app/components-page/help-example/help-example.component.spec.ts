@@ -1,8 +1,9 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { UiKitModule } from 'ui-kit';
-import { DemoComponent } from '../../common/demo/demo.component';
+
 import { HelpExampleComponent } from './help-example.component';
+import { DemoModule } from 'src/app/common/demo/demo.module';
 
 describe('HelpExampleComponent', () => {
   let component: HelpExampleComponent;
@@ -10,8 +11,8 @@ describe('HelpExampleComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ HelpExampleComponent, DemoComponent ],
-      imports: [UiKitModule]
+      declarations: [ HelpExampleComponent ],
+      imports: [UiKitModule, DemoModule]
     })
     .compileComponents();
   }));

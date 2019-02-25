@@ -1,5 +1,194 @@
-<h1 class="page__title page-block__title ws-h1">Modal</h1>
-<ws-demo code='<ws-modal>Content</ws-modal>'>
-  <ws-modal>Content</ws-modal>
+<h1 class="page__title page-block__title ws-h1">Modal / Modal Router</h1>
+
+<ws-demo
+  html="
+  <ws-modal>
+    <ws-modal-header title='Title'>
+      some sub title
+    </ws-modal-header>
+    Modal Content
+  </ws-modal>
+"
+>
+  <p>Basic Modal</p>
+  <ws-modal>
+    <ws-modal-header title="Title">
+      some sub title
+    </ws-modal-header>
+    Modal Content
+  </ws-modal>
 </ws-demo>
 
+<ws-demo
+  html='
+  <ws-modal>
+    <ws-modal-header title="Title" (back)="onBack()" (close)="onClose()">
+      some sub title
+    </ws-modal-header>
+    Modal with header buttons
+  </ws-modal>
+'
+>
+  <p>Modal with header buttons</p>
+  <ws-modal>
+    <ws-modal-header title="Title" (back)="onBack()" (close)="onClose()">
+      some sub title
+    </ws-modal-header>
+    Modal with header buttons
+  </ws-modal>
+</ws-demo>
+
+<ws-demo
+  html='
+  <ws-button (click)="router.open()">Open Modal</ws-button>
+  <ws-modal-router #router>
+    <ws-modal>
+      <ws-modal-header
+        title="Title"
+        (close)="router.close()"
+      >
+        some sub title
+      </ws-modal-header>
+      Modal with header buttons
+    </ws-modal>
+  </ws-modal-router>
+'
+>
+  <p>Modal with router</p>
+  <ws-button (click)="router.open()">Open Modal</ws-button>
+  <ws-modal-router #router>
+    <ws-modal>
+      <ws-modal-header
+        title="Title"
+        (close)="router.close()"
+      >
+        some sub title
+      </ws-modal-header>
+      Modal with header buttons
+    </ws-modal>
+  </ws-modal-router>
+</ws-demo>
+
+<ws-demo
+  html='
+  <ws-button (click)="router2.open()">Open Modal</ws-button>
+  <ws-modal-router #router2>
+    <ws-modal name="first">
+      <ws-modal-header
+        title="Modal 1"
+        (close)="router2.close()"
+      >
+        some sub title
+      </ws-modal-header>
+        Modal 1 content
+        <div>
+          <ws-button (click)="router2.navigate(&apos;second&apos;)">Next screen</ws-button>
+        </div>
+    </ws-modal>
+    <ws-modal name="second">
+        <ws-modal-header
+          title="Modal 2"
+          (back)="router2.navigate(&apos;first&apos;)"
+          (close)="router2.close()"
+        >
+          some sub title
+        </ws-modal-header>
+        Modal 2 content
+      </ws-modal>
+  </ws-modal-router>
+'
+>
+  <p>Modal with router with multiple modals. (Imperative way)</p>
+  <ws-button (click)="router2.open()">Open Modal</ws-button>
+  <ws-modal-router #router2 [selected]="'second'">
+    <ws-modal name="first">
+      <ws-modal-header
+        title="Modal 1"
+        (close)="router2.close()"
+      >
+        some sub title
+      </ws-modal-header>
+        Modal 1 content
+        <div>
+          <ws-button (click)="router2.navigate('second')">Next screen</ws-button>
+        </div>
+    </ws-modal>
+    <ws-modal name="second">
+        <ws-modal-header
+          title="Modal 2"
+          (back)="router2.navigate('first')"
+          (close)="router2.close()"
+        >
+          some sub title
+        </ws-modal-header>
+        Modal 2 content
+      </ws-modal>
+  </ws-modal-router>
+</ws-demo>
+
+<ws-demo
+  html='
+  <ws-button (click)="isRouteVisible = true">Open Modal</ws-button>
+  <ws-modal-router [selected]="selectedRoute" [visible]="isRouteVisible">
+    <ws-modal name="first">
+      <ws-modal-header
+        title="Modal 1"
+        (close)="isRouteVisible = false"
+      >
+        some sub title
+      </ws-modal-header>
+        Modal 1 content
+        <div>
+          <ws-button (click)="selectedRoute = &apos;second&apos;">Next screen</ws-button>
+        </div>
+    </ws-modal>
+    <ws-modal name="second">
+        <ws-modal-header
+          title="Modal 2"
+          (back)="selectedRoute = &apos;first&apos;"
+          (close)="isRouteVisible = false"
+        >
+          some sub title
+        </ws-modal-header>
+        Modal 2 content
+      </ws-modal>
+  </ws-modal-router>
+'
+  ts='
+  @Component({
+    selector: "example",
+    templateUrl: "./example.component.html",
+  })
+  class ExampleComponent {
+    selectedRoute = "first";
+    isRouteVisible = false;
+  }
+'
+>
+  <p>Modal with router with multiple modals. (Declarative way)</p>
+  <ws-button (click)="isRouteVisible = true">Open Modal</ws-button>
+  <ws-modal-router [selected]="selectedRoute" [visible]="isRouteVisible">
+    <ws-modal name="first">
+      <ws-modal-header
+        title="Modal 1"
+        (close)="isRouteVisible = false"
+      >
+        some sub title
+      </ws-modal-header>
+        Modal 1 content
+        <div>
+          <ws-button (click)="selectedRoute = 'second'">Next screen</ws-button>
+        </div>
+    </ws-modal>
+    <ws-modal name="second">
+        <ws-modal-header
+          title="Modal 2"
+          (back)="selectedRoute = 'first'"
+          (close)="isRouteVisible = false"
+        >
+          some sub title
+        </ws-modal-header>
+        Modal 2 content
+      </ws-modal>
+  </ws-modal-router>
+</ws-demo>

@@ -15,12 +15,13 @@ import { SwitchComponent } from './switch/switch.component';
 import { TabComponent } from './tabs/tab/tab.component';
 import { TabsComponent } from './tabs/tabs.component';
 import { TransactionComponent } from './transaction/transaction.component';
-import { SearchbarComponent } from './searchbar/searchbar.component';
+import { SearchComponent } from './search/search.component';
 import { TableComponent } from './table/table.component';
 import { HeaderNavigationComponent } from './header-navigation/header-navigation.component';
 import { FooterComponent } from './footer/footer.component';
-import { ModalTitleComponent } from './modal-title/modal-title.component';
 import { ModalComponent } from './modal/modal.component';
+import { ModalHeaderComponent } from './modal/header/modal-header.component';
+import { ModalRouterComponent } from './modal/router/modal-router.component';
 
 
 @NgModule({
@@ -39,12 +40,13 @@ import { ModalComponent } from './modal/modal.component';
     HelpComponent,
     RadioGroupComponent,
     RadioButtonGroupComponent,
-    SearchbarComponent,
+    SearchComponent,
     TableComponent,
     HeaderNavigationComponent,
     FooterComponent,
-    ModalTitleComponent,
-    ModalComponent
+    ModalHeaderComponent,
+    ModalComponent,
+    ModalRouterComponent
   ],
   imports: [
     CommonModule,
@@ -65,12 +67,13 @@ import { ModalComponent } from './modal/modal.component';
     RadioComponent,
     IconComponent,
     HelpComponent,
-    SearchbarComponent,
+    SearchComponent,
     TableComponent,
     HeaderNavigationComponent,
     FooterComponent,
-    ModalTitleComponent,
-    ModalComponent
+    ModalHeaderComponent,
+    ModalComponent,
+    ModalRouterComponent
   ],
 })
 export class UiKitModule { }
