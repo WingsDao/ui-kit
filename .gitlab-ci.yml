@@ -12,7 +12,7 @@ Test:
   image: circleci/node:10-browsers
   stage: test
   script:
-    - npm
+    - npm install
     - npm run test:ci
     - npm run test:ci:ui-kit
 
