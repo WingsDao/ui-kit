@@ -1,8 +1,8 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { UiKitModule } from 'ui-kit';
 
-import { DemoComponent } from '../../common/demo/demo.component';
 import { InputExampleComponent } from './input-example.component';
+import { DemoModule } from '../../common/demo/demo.module';
 
 describe('InputExampleComponent', () => {
   let component: InputExampleComponent;
@@ -10,8 +10,8 @@ describe('InputExampleComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ InputExampleComponent, DemoComponent ],
-      imports: [UiKitModule]
+      declarations: [ InputExampleComponent ],
+      imports: [UiKitModule, DemoModule]
     })
     .compileComponents();
   }));

@@ -2,7 +2,8 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { UiKitModule } from 'ui-kit';
 import { ButtonExampleComponent } from './button-example.component';
-import { DemoComponent } from '../../common/demo/demo.component';
+import { AppCommonModule } from '../../common/common.module';
+import { DemoModule } from '../../common/demo/demo.module';
 
 describe('ButtonExampleComponent', () => {
   let component: ButtonExampleComponent;
@@ -10,8 +11,8 @@ describe('ButtonExampleComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ ButtonExampleComponent, DemoComponent ],
-      imports: [UiKitModule]
+      declarations: [ ButtonExampleComponent ],
+      imports: [UiKitModule, AppCommonModule, DemoModule]
     })
     .compileComponents();
   }));

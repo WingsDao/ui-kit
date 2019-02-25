@@ -2,7 +2,7 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { UiKitModule } from 'ui-kit';
 
 import { ModalExampleComponent } from './modal-example.component';
-import { DemoComponent } from '../../common/demo/demo.component';
+import { DemoModule } from '../../common/demo/demo.module';
 
 describe('ModalExampleComponent', () => {
   let component: ModalExampleComponent;
@@ -10,8 +10,8 @@ describe('ModalExampleComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ ModalExampleComponent, DemoComponent ],
-      imports: [UiKitModule]
+      declarations: [ ModalExampleComponent ],
+      imports: [UiKitModule, DemoModule]
     })
     .compileComponents();
   }));

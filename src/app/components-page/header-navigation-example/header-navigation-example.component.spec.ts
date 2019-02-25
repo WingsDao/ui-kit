@@ -2,7 +2,7 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { UiKitModule } from 'ui-kit';
 
 import { HeaderNavigationExampleComponent } from './header-navigation-example.component';
-import { DemoComponent } from 'src/app/common/demo/demo.component';
+import { DemoModule } from '../../common/demo/demo.module';
 
 describe('HeaderNavigationExampleComponent', () => {
   let component: HeaderNavigationExampleComponent;
@@ -10,8 +10,8 @@ describe('HeaderNavigationExampleComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ HeaderNavigationExampleComponent, DemoComponent ],
-      imports: [UiKitModule]
+      declarations: [ HeaderNavigationExampleComponent ],
+      imports: [UiKitModule, DemoModule]
     })
     .compileComponents();
   }));

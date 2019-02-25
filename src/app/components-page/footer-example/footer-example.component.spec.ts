@@ -2,7 +2,7 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { UiKitModule } from 'ui-kit';
 
 import { FooterExampleComponent } from './footer-example.component';
-import { DemoComponent } from '../../common/demo/demo.component';
+import { DemoModule } from 'src/app/common/demo/demo.module';
 
 describe('FooterExampleComponent', () => {
   let component: FooterExampleComponent;
@@ -10,8 +10,8 @@ describe('FooterExampleComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ FooterExampleComponent, DemoComponent ],
-      imports: [UiKitModule]
+      declarations: [ FooterExampleComponent ],
+      imports: [UiKitModule, DemoModule]
     })
     .compileComponents();
   }));

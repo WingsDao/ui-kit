@@ -2,7 +2,7 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { UiKitModule } from 'ui-kit';
 
 import { SearchExampleComponent } from './search-example.component';
-import { DemoComponent } from '../../common/demo/demo.component';
+import { DemoModule } from '../../common/demo/demo.module';
 
 describe('SearchExampleComponent', () => {
   let component: SearchExampleComponent;
@@ -10,8 +10,8 @@ describe('SearchExampleComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ SearchExampleComponent, DemoComponent ],
-      imports: [UiKitModule]
+      declarations: [ SearchExampleComponent ],
+      imports: [UiKitModule, DemoModule]
     })
     .compileComponents();
   }));

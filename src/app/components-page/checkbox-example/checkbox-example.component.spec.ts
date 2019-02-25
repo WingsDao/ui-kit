@@ -1,8 +1,8 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-
 import { UiKitModule } from 'ui-kit';
-import { DemoComponent } from '../../common/demo/demo.component';
+
 import { CheckboxExampleComponent } from './checkbox-example.component';
+import { DemoModule } from '../../common/demo/demo.module';
 
 describe('CheckboxExampleComponent', () => {
   let component: CheckboxExampleComponent;
@@ -10,8 +10,8 @@ describe('CheckboxExampleComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ CheckboxExampleComponent, DemoComponent ],
-      imports: [UiKitModule]
+      declarations: [ CheckboxExampleComponent ],
+      imports: [UiKitModule, DemoModule]
     })
     .compileComponents();
   }));

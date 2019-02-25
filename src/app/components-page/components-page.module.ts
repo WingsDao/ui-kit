@@ -19,6 +19,7 @@ import { TableExampleComponent } from './table-example/table-example.component';
 import { HeaderNavigationExampleComponent } from './header-navigation-example/header-navigation-example.component';
 import { FooterExampleComponent } from './footer-example/footer-example.component';
 import { ModalExampleComponent } from './modal-example/modal-example.component';
+import { DemoModule } from '../common/demo/demo.module';
 
 
 @NgModule({
@@ -43,7 +44,8 @@ import { ModalExampleComponent } from './modal-example/modal-example.component';
     CommonModule,
     UiKitModule,
     RouterModule,
-    AppCommonModule
+    AppCommonModule,
+    DemoModule
   ]
 })
 export class ComponentsPageModule { }

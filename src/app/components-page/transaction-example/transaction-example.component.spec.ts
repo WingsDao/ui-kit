@@ -1,8 +1,8 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { UiKitModule } from 'ui-kit';
 
-import { DemoComponent } from '../../common/demo/demo.component';
 import { TransactionExampleComponent } from './transaction-example.component';
+import { DemoModule } from '../../common/demo/demo.module';
 
 describe('TransactionExampleComponent', () => {
   let component: TransactionExampleComponent;
@@ -10,8 +10,8 @@ describe('TransactionExampleComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ TransactionExampleComponent, DemoComponent ],
-      imports: [UiKitModule]
+      declarations: [ TransactionExampleComponent ],
+      imports: [UiKitModule, DemoModule]
     })
     .compileComponents();
   }));

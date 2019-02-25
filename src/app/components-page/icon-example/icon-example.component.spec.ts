@@ -1,8 +1,8 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { UiKitModule } from 'ui-kit';
 
-import { DemoComponent } from '../../common/demo/demo.component';
 import { IconExampleComponent } from './icon-example.component';
+import { DemoModule } from '../../common/demo/demo.module';
 
 describe('IconExampleComponent', () => {
   let component: IconExampleComponent;
@@ -10,8 +10,8 @@ describe('IconExampleComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ IconExampleComponent, DemoComponent ],
-      imports: [UiKitModule]
+      declarations: [ IconExampleComponent ],
+      imports: [UiKitModule, DemoModule]
     })
     .compileComponents();
   }));

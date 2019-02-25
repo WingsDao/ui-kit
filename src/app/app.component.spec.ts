@@ -13,6 +13,7 @@ import { GettingStartedPageComponent } from './getting-started-page/getting-star
 import { HomePageComponent } from './home-page/home-page.component';
 import { PalettesPageComponent } from './palettes-page/palettes-page.component';
 import { TypographyPageComponent } from './typography-page/typography-page.component';
+import { DemoModule } from './common/demo/demo.module';
 
 describe('AppComponent', () => {
   let location: Location;
@@ -33,7 +34,8 @@ describe('AppComponent', () => {
         UiKitModule,
         RouterTestingModule.withRoutes(APP_ROUTES),
         ComponentsPageModule,
-        AppCommonModule
+        AppCommonModule,
+        DemoModule
       ]
     }).compileComponents();
     router = TestBed.get(Router);
