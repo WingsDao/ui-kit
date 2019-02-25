@@ -8,4 +8,12 @@ import { Component } from '@angular/core';
 export class ModalExampleComponent {
   selectedRoute = 'first';
   isRouteVisible = false;
+
+  onBack() {
+    // do something
+  }
+
+  onClose() {
+    // do something
+  }
 }
