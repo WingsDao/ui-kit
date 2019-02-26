@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, Input, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'ws-search',
@@ -6,13 +6,21 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./search.component.scss']
 })
 export class SearchComponent implements OnInit {
-  searchValue: string = null;
+  private _value: string;
 
-  constructor() { }
+  @Output() valueChange = new EventEmitter<string>();
+
+  @Input() placeholder: string;
+
+  @Input()
+  get value() {
+    return this._value;
+  }
+
+  set value(val: string) {
+    this._value = val;
+    this.valueChange.emit(val);
+  }
 
   ngOnInit() {}
-
-  onClick() {
-    this.searchValue = '';
-  }
 }
