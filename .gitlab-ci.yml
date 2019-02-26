@@ -24,8 +24,8 @@ Build:
 
     - docker build
         -f ./.build/Dockerfile
-        -t ${CONTAINER_FULLNAME}-ui-kit:${CONTAINER_TAG} .
-    - docker push ${CONTAINER_FULLNAME}-ui-kit:${CONTAINER_TAG}
+        -t ${CONTAINER_FULLNAME}:${CONTAINER_TAG} .
+    - docker push ${CONTAINER_FULLNAME}:${CONTAINER_TAG}
   dependencies:
     - Test
 
@@ -52,6 +52,7 @@ Deploy test:
     NAMESPACE: default
     K8S_DEPLOY_CONFIGNAME_LIST: 41_ui-kit.yaml
     SITE_DOMAIN: ui.wings.toys
+    SITE_SSL: wingstoys-tls-secret
     REPLICAS: 1
   extends: .only-repo
   stage: deploy
