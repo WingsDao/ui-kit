@@ -20,7 +20,7 @@ export enum ComponentsRouting {
   Help = 'help',
   Search = 'search',
   Table = 'table',
-  HeaderNavigation = 'header-navigation',
+  NavBar = 'nav',
   Footer = 'footer',
   Modal = 'modal'
 }

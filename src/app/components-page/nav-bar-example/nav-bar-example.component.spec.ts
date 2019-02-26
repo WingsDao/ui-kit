@@ -1,23 +1,23 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { UiKitModule } from 'ui-kit';
 
-import { HeaderNavigationExampleComponent } from './header-navigation-example.component';
+import { NavBarExampleComponent } from './nav-bar-example.component';
 import { DemoModule } from '../../common/demo/demo.module';
 
-describe('HeaderNavigationExampleComponent', () => {
-  let component: HeaderNavigationExampleComponent;
-  let fixture: ComponentFixture<HeaderNavigationExampleComponent>;
+describe('NavBarExampleComponent', () => {
+  let component: NavBarExampleComponent;
+  let fixture: ComponentFixture<NavBarExampleComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ HeaderNavigationExampleComponent ],
+      declarations: [ NavBarExampleComponent ],
       imports: [UiKitModule, DemoModule]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(HeaderNavigationExampleComponent);
+    fixture = TestBed.createComponent(NavBarExampleComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

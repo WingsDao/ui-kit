@@ -21,7 +21,7 @@ import { GettingStartedPageComponent } from './getting-started-page/getting-star
 import { HomePageComponent } from './home-page/home-page.component';
 import { PalettesPageComponent } from './palettes-page/palettes-page.component';
 import { TypographyPageComponent } from './typography-page/typography-page.component';
-import { HeaderNavigationExampleComponent } from './components-page/header-navigation-example/header-navigation-example.component';
+import { NavBarExampleComponent } from './components-page/nav-bar-example/nav-bar-example.component';
 
 const CHILD_ROUTES: Routes = [
   {path: '', redirectTo: ComponentsRouting.Input, pathMatch: 'full'},
@@ -37,7 +37,7 @@ const CHILD_ROUTES: Routes = [
   {path: ComponentsRouting.Help, component: HelpExampleComponent},
   {path: ComponentsRouting.Search, component: SearchExampleComponent},
   {path: ComponentsRouting.Table, component: TableExampleComponent},
-  {path: ComponentsRouting.HeaderNavigation, component: HeaderNavigationExampleComponent},
+  {path: ComponentsRouting.NavBar, component: NavBarExampleComponent},
   {path: ComponentsRouting.Footer, component: FooterExampleComponent},
   {path: ComponentsRouting.Modal, component: ModalExampleComponent},
 ];

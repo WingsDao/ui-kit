@@ -16,11 +16,10 @@ import { TabsExampleComponent } from './tabs-example/tabs-example.component';
 import { TransactionExampleComponent } from './transaction-example/transaction-example.component';
 import { SearchExampleComponent } from './search-example/search-example.component';
 import { TableExampleComponent } from './table-example/table-example.component';
-import { HeaderNavigationExampleComponent } from './header-navigation-example/header-navigation-example.component';
+import { NavBarExampleComponent } from './nav-bar-example/nav-bar-example.component';
 import { FooterExampleComponent } from './footer-example/footer-example.component';
 import { ModalExampleComponent } from './modal-example/modal-example.component';
 import { DemoModule } from '../common/demo/demo.module';
-
 
 @NgModule({
   declarations: [
@@ -37,7 +36,7 @@ import { DemoModule } from '../common/demo/demo.module';
     HelpExampleComponent,
     SearchExampleComponent,
     TableExampleComponent,
-    HeaderNavigationExampleComponent,
+    NavBarExampleComponent,
     FooterExampleComponent,
     ModalExampleComponent],
   imports: [
