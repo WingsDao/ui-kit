@@ -43,7 +43,7 @@ Deploy prod:
     name: prod_ui-kit
   script:
     - k8s-deploy.sh
-    - wait_deployed.sh "${CONTAINER_NAME}-ui-kit" "${WAIT_DEPLOYMENTS}"
+    - wait_deployed.sh "${CONTAINER_NAME}" "${WAIT_DEPLOYMENTS}"
   dependencies:
     - Build
 
@@ -65,7 +65,7 @@ Deploy test:
     - k8s-deploy.sh delete
     - sleep 7
     - k8s-deploy.sh apply
-    - wait_deployed.sh "${CONTAINER_NAME}-ui-kit" "${WAIT_DEPLOYMENTS}"
+    - wait_deployed.sh "${CONTAINER_NAME}" "${WAIT_DEPLOYMENTS}"
   dependencies:
     - Build
 
