@@ -44,7 +44,7 @@ a {
 }
 
 
-:host[success] {
+:host[error] {
   a {
     border: 1px solid var(--ws-red);
     color: var(--ws-red);
