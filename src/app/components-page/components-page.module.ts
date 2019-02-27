@@ -20,6 +20,7 @@ import { NavBarExampleComponent } from './nav-bar-example/nav-bar-example.compon
 import { FooterExampleComponent } from './footer-example/footer-example.component';
 import { ModalExampleComponent } from './modal-example/modal-example.component';
 import { DemoModule } from '../common/demo/demo.module';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -44,7 +45,8 @@ import { DemoModule } from '../common/demo/demo.module';
     UiKitModule,
     RouterModule,
     AppCommonModule,
-    DemoModule
+    DemoModule,
+    FormsModule
   ]
 })
 export class ComponentsPageModule { }

@@ -1,25 +1,20 @@
-import { Component, Input, Output, EventEmitter } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { MakeProvider, AbstractValueAccessor } from '../../common/abstract-value-accessor';
 
 @Component({
   selector: 'ws-input',
   templateUrl: './input.component.html',
-  styleUrls: ['./input.component.scss']
+  styleUrls: ['./input.component.scss'],
+  providers: [MakeProvider(InputComponent)]
 })
-export class InputComponent {
+export class InputComponent extends AbstractValueAccessor<string> {
   @Input() error: boolean;
   @Input() disabled: boolean;
   @Input() message: string;
   @Input() label: string;
   @Input() type: string;
 
-  private _value: string;
-  @Output() valueChange = new EventEmitter<string>();
-  @Input()
-  get value() {
-    return this._value;
-  }
-  set value(val: string) {
-    this._value = val;
-    this.valueChange.emit(val);
+  setDisabledState(isDisabled: boolean) {
+    this.disabled = isDisabled;
   }
 }

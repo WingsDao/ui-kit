@@ -7,7 +7,7 @@ import { CheckboxComponent } from './checkbox.component';
 
 @Component({
   selector: 'ws-test-wrapper',
-  template: `<ws-checkbox [(value)]="isChecked"></ws-checkbox>`
+  template: `<ws-checkbox [(ngModel)]="isChecked"></ws-checkbox>`
 })
 export class TestWrapperComponent {
   isChecked;
