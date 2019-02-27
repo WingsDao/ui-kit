@@ -1,11 +1,12 @@
 {
   "name": "@wings_platform/ui-kit-panel",
   "version": "0.0.0",
+  "homepage": "https://design.wings.ai/",
   "scripts": {
     "ng": "ng",
     "start": "concurrently --kill-others \"ng build ui-kit --watch\" \"sleep 10 && ng serve ui-kit-panel\"",
     "build": "ng build ui-kit && ng build ui-kit-panel --prod",
-    "build:ui-kit": "ng build ui-kit --prod",
+    "build:ui-kit": "ng build ui-kit",
     "test": "ng test",
     "test:ci": "ng build ui-kit && ng test ui-kit-panel --no-watch --no-progress --browsers=ChromeHeadlessCI",
     "test:ui-kit": "ng test ui-kit",
@@ -16,6 +17,10 @@
     "e2e": "ng e2e"
   },
   "license": "GPLv3",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/WingsDao/ui-kit.git"
+  },
   "dependencies": {
     "@angular/animations": "~7.2.0",
     "@angular/common": "~7.2.0",
