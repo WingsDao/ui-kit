@@ -1,26 +1,17 @@
 import { Component, OnInit, Output, Input, EventEmitter } from '@angular/core';
+import { AbstractValueAccessor, MakeProvider } from '../../common/abstract-value-accessor';
 
 @Component({
   selector: 'ws-search',
   templateUrl: './search.component.html',
-  styleUrls: ['./search.component.scss']
+  styleUrls: ['./search.component.scss'],
+  providers: [MakeProvider(SearchComponent)]
 })
-export class SearchComponent implements OnInit {
-  private _value: string;
-
-  @Output() valueChange = new EventEmitter<string>();
-
+export class SearchComponent extends AbstractValueAccessor<string> {
   @Input() placeholder: string;
 
-  @Input()
-  get value() {
-    return this._value;
-  }
 
-  set value(val: string) {
-    this._value = val;
-    this.valueChange.emit(val);
+  setDisabledState(isDisabled: boolean) {
+    throw new Error('Method not implemented.');
   }
-
-  ngOnInit() {}
 }
