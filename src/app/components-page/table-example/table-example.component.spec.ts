@@ -3,6 +3,7 @@ import { UiKitModule } from 'ui-kit';
 
 import { TableExampleComponent } from './table-example.component';
 import { DemoModule } from '../../common/demo/demo.module';
+import { FormsModule } from '@angular/forms';
 
 describe('TableExampleComponent', () => {
   let component: TableExampleComponent;
@@ -11,7 +12,7 @@ describe('TableExampleComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       declarations: [ TableExampleComponent ],
-      imports: [UiKitModule, DemoModule]
+      imports: [UiKitModule, DemoModule, FormsModule]
     })
     .compileComponents();
   }));

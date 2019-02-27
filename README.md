@@ -1,27 +1,50 @@
-# UiKitPanel
+# Wings Platform Design Kit - Feather design system
+We invite you to check out and contribute to our new WINGS Platform Angular UiKit.
+We will be glad to welcome every participant to our open source solution. 
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.0.
+## Getting Started
 
-## Development server
+Checkout for [documentation](http://desing.wings.ai) on the latest version of library.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+### Prerequisites
 
-## Code scaffolding
+You'll need an angular app to be able to use this components library.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+### Installing
 
-## Build
+Install library using npm:
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+```
+npm install @wings_platform/ui-kit
+```
 
-## Running unit tests
+Or yarn:
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+```
+yarn install @wings_platform/ui-kit
+```
 
-## Running end-to-end tests
+## Contribute
+```
+git clone https://github.com/WingsDao/ui-kit.git // clone the repo
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+cd ui-kit
 
-## Further help
+npm install // install all dependencies
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+npm start // run an app on https://localhost:4200
+
+```
+Add, edit or fix and create a pull requests!
+
+## Built With
+
+* [Angular](https://angular.io/)
+
+## Versioning
+
+We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags). 
+
+## License
+
+- GBLv3
