@@ -9,8 +9,8 @@ import { RadioButtonComponent } from './radio-button/radio-button.component';
 @Component({
   selector: 'ws-test-wrapper',
   template: `
-  <ws-radio-button-group [(selected)]="selected" name="my-option">
-    <ws-radio-button value="1">option {{value}}</ws-radio-button>
+  <ws-radio-button-group [(ngModel)]="selected" name="my-option">
+    <ws-radio-button value="1">option 1</ws-radio-button>
     <ws-radio-button value="2">option 2</ws-radio-button>
     <ws-radio-button value="3">option 3</ws-radio-button>
   </ws-radio-button-group>
@@ -41,7 +41,7 @@ describe('RadioButtonGroupComponent', () => {
     fixture = TestBed.createComponent(TestWrapperComponent);
     testWrapper = fixture.nativeElement;
     radioButtonGroupComponent = fixture.debugElement.query(By.directive(RadioButtonGroupComponent)).nativeElement;
-    radioInputs = fixture.debugElement.queryAll(By.css('input[type="checkbox"]'));
+    radioInputs = fixture.debugElement.queryAll(By.css('input[type="radio"]'));
 
     fixture.detectChanges();
   });
@@ -53,7 +53,7 @@ describe('RadioButtonGroupComponent', () => {
 
   it('should set selected from @Input', () => {
     testWrapper.selected = '2';
-    const input = fixture.debugElement.query(By.css('input[type="checkbox"]:nth-child(1)')).nativeElement;
+    const input = fixture.debugElement.query(By.css('input[type="radio"]:nth-child(1)')).nativeElement;
     input.click();
     fixture.detectChanges();
     expect(testWrapper.selected).toBe('2');

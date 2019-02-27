@@ -9,6 +9,6 @@ import { AbstractValueAccessor, MakeProvider } from '../../common/abstract-value
 })
 export class SwitchComponent extends AbstractValueAccessor<boolean> {
   setDisabledState(isDisabled: boolean) {
-    throw new Error("Method not implemented.");
+    throw new Error('Method not implemented.');
   }
 }

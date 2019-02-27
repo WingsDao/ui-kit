@@ -1,5 +1,6 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { UiKitModule } from 'ui-kit';
+import { FormsModule } from '@angular/forms';
 
 import { CheckboxExampleComponent } from './checkbox-example.component';
 import { DemoModule } from '../../common/demo/demo.module';
@@ -11,7 +12,7 @@ describe('CheckboxExampleComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       declarations: [ CheckboxExampleComponent ],
-      imports: [UiKitModule, DemoModule]
+      imports: [UiKitModule, DemoModule, FormsModule]
     })
     .compileComponents();
   }));
