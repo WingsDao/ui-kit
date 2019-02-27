@@ -8,8 +8,7 @@ import { AbstractValueAccessor, MakeProvider } from '../../common/abstract-value
   providers: [MakeProvider(SearchComponent)]
 })
 export class SearchComponent extends AbstractValueAccessor<string> {
-  @Input() placeholder: string;
-
+  @Input() placeholder = '';
 
   setDisabledState(isDisabled: boolean) {
     throw new Error('Method not implemented.');

@@ -1,95 +1,66 @@
-table {
-  border-spacing: 0;
-}
+:host {
+  & /deep/ table {
+    border-spacing: 0;
+    line-height: 23px;
+    font-size: 14px;
+    color: #222222;
 
-th {
-  background: #D4DEE440;
-  color: #BDC8CF;
-  text-transform: uppercase;
-  font-weight: 800;
-  text-align: left;
-  min-width: 60px;
-  height: 48px;
-  white-space: nowrap;
-}
+    th {
+      background: #d4dee440;
+      color: #bdc8cf;
+      text-transform: uppercase;
+      font-weight: 800;
+      text-align: left;
+      min-width: 60px;
+      height: 48px;
+      white-space: nowrap;
+    }
 
-td {
-  white-space: nowrap;
-  padding-right: 16px;
-  height: 80px;
-  border-bottom: 1px solid #D4DEE4;
-}
+    td {
+      white-space: nowrap;
+      padding-right: 16px;
+      height: 60px;
+      border-bottom: 1px solid #d4dee4;
+    }
 
-th:first-child {
-  padding-left: 32px;
-}
+    th:first-child {
+      padding-left: 32px;
+    }
 
-th:last-child {
-  padding-right: 32px;
-}
+    th:last-child {
+      padding-right: 32px;
+    }
 
-td:first-child {
-  display: flex;
-  margin-left: 32px;
-  align-items: center;
-}
+    td:first-child {
+      margin-left: 32px;
+      display: flex;
+      align-items: center;
+    }
 
-td:last-child {
-  display: inline-block;
-  margin-right: 32px;
-  line-height: 80px;
-}
+    [ws-filter]::after {
+      content: "";
+      border: 2px solid #bdc8cf;
+      border-top: none;
+      border-right: none;
+      width: 6px;
+      height: 6px;
+      box-sizing: border-box;
+      display: inline-block;
+      vertical-align: middle;
+      margin-left: 6px;
+      cursor: pointer;
+    }
 
-.table-text {
-  line-height: 23px;
-  font-size: 14px;
-  color: #222222;
-}
+    [ws-filter=asc]::after {
+      margin-top: -6px;
+      transform: rotate(-45deg);
+    }
 
-.filter {
-  border: 2px solid #BDC8CF;
-  border-top: none;
-  border-right: none;
-  width: 6px;
-  height: 6px;
-  box-sizing: border-box;
-  transform: rotate(-45deg);
-  display: inline-block;
-  vertical-align: middle;
-  margin-top: -6px;
-  margin-left: 6px;
-  cursor: pointer;
-}
-
-.succes {
-  color: #63DCBF;
-}
-.succes-icon {
-  display: inline-block;
-  vertical-align: text-top;
-  margin-right: 8px;
-  position: relative;
-  width: 16px;
-  height: 16px;
-  background: #63DCBF;
-  border-radius: 50%;
-
-  &::after {
-    content: '';
-    display: block;
-    position: absolute;
-    top: 45%;
-    left: 50%;
-    height: 5px;
-    width: 8px;
-    box-sizing: border-box;
-    border: 2px solid white;
-    border-top: none;
-    border-right: none;
-    transform: translate( -50%, -50%) rotate(-45deg);
+    [ws-filter=desc]::after {
+      transform: rotate(135deg);
+    }
+    th[ws-filter] {
+      cursor: pointer;
+    }
   }
-}
-
-.checkbox-head /deep/ span {
-  border-radius: 3px;
 }
