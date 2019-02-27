@@ -9,14 +9,13 @@ import { RadioComponent } from './radio/radio.component';
 @Component({
   selector: 'ws-test-wrapper',
   template: `
-  <ws-radio-group [(selected)]="selected" name="my-option">
-    <ws-radio value="1">option {{value}}</ws-radio>
-    <ws-radio value="2">option 2</ws-radio>
-    <ws-radio value="3">option 3</ws-radio>
+  <ws-radio-group [(ngModel)]='selected' name='my-option'>
+    <ws-radio value='1'>option 1</ws-radio>
+    <ws-radio value='2'>option 2</ws-radio>
+    <ws-radio value='3'>option 3</ws-radio>
   </ws-radio-group>
   `
 })
-
 export class TestWrapperComponent {
   selected = '3';
 }

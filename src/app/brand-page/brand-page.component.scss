@@ -43,4 +43,11 @@
   }
 }
 
+.brandbook__buttons {
+  display: flex;
+  justify-content: flex-start;
 
+  & > a {
+    margin-right: 20px;
+  }
+}

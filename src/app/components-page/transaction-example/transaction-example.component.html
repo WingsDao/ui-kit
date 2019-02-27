@@ -4,8 +4,17 @@
 >
   <ws-transaction href="/brand">Transaction</ws-transaction>
 </ws-demo>
+
 <ws-demo
-  html='<ws-transaction success (click)="onClick()>Transaction</ws-transaction>'
+  html='<ws-transaction error (click)="onClick()">Transaction</ws-transaction>'
+  ts='
+  ...
+  export class ExampleComponent {
+    onClick() {
+      alert("clicked");
+    }
+  }
+'
 >
-  <ws-transaction success (click)="onClick()">Transaction</ws-transaction>
+  <ws-transaction error (click)="onClick()">Transaction</ws-transaction>
 </ws-demo>

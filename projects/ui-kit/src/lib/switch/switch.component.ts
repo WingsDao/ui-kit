@@ -1,22 +1,14 @@
-import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { Component} from '@angular/core';
+import { AbstractValueAccessor, MakeProvider } from '../../common/abstract-value-accessor';
 
 @Component({
   selector: 'ws-switch',
   templateUrl: './switch.component.html',
-  styleUrls: ['./switch.component.scss']
+  styleUrls: ['./switch.component.scss'],
+  providers: [MakeProvider(SwitchComponent)]
 })
-export class SwitchComponent {
-  _value: boolean;
-
-  @Output() valueChange = new EventEmitter<boolean>();
-
-  @Input()
-  get value() {
-    return this._value;
-  }
-
-  set value(val) {
-    this._value = val;
-    this.valueChange.emit(val);
+export class SwitchComponent extends AbstractValueAccessor<boolean> {
+  setDisabledState(isDisabled: boolean) {
+    throw new Error('Method not implemented.');
   }
 }

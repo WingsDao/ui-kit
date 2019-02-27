@@ -17,7 +17,7 @@ import { TabsComponent } from './tabs/tabs.component';
 import { TransactionComponent } from './transaction/transaction.component';
 import { SearchComponent } from './search/search.component';
 import { TableComponent } from './table/table.component';
-import { HeaderNavigationComponent } from './header-navigation/header-navigation.component';
+import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { FooterComponent } from './footer/footer.component';
 import { ModalComponent } from './modal/modal.component';
 import { ModalHeaderComponent } from './modal/header/modal-header.component';
@@ -42,7 +42,7 @@ import { ModalRouterComponent } from './modal/router/modal-router.component';
     RadioButtonGroupComponent,
     SearchComponent,
     TableComponent,
-    HeaderNavigationComponent,
+    NavBarComponent,
     FooterComponent,
     ModalHeaderComponent,
     ModalComponent,
@@ -69,7 +69,7 @@ import { ModalRouterComponent } from './modal/router/modal-router.component';
     HelpComponent,
     SearchComponent,
     TableComponent,
-    HeaderNavigationComponent,
+    NavBarComponent,
     FooterComponent,
     ModalHeaderComponent,
     ModalComponent,

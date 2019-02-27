@@ -1,26 +1,3 @@
-<table class="table-text">
-  <tr class="ws-text-xs">
-    <th>
-      <ws-checkbox class="checkbox-head" [(value)]="isFilterChecked" (click)="onCheck()"></ws-checkbox>
-      <div class="filter"></div>
-    </th>
-    <th>ETH address</th>
-    <th>Name<div class="filter"></div></th>
-    <th>Country<div class="filter"></div></th>
-    <th>KYC status<div class="filter"></div></th>
-  </tr>
-  <tr>
-    <td><ws-checkbox [(value)]="isCheckedOne"></ws-checkbox></td>
-    <td>0x1d4fc289dfdab6949cd4a41dd995571dca5b2592</td>
-    <td>Konstantin Konstantinopolsky</td>
-    <td>Russian Federation</td>
-    <td><div class="succes"><span class="succes-icon"></span>Verified</div></td>
-  </tr>
-  <tr>
-    <td><ws-checkbox [(value)]="isCheckedTwo"></ws-checkbox></td>
-    <td>0x1d4fc289dfdab6949cd4a41dd995571dca5b2592</td>
-    <td>Konstantin Konstantinopolsky</td>
-    <td>Russian Federation</td>
-    <td><div class="succes"><span class="succes-icon"></span>Verified</div></td>
-  </tr>
+<table>
+  <ng-content></ng-content>
 </table>

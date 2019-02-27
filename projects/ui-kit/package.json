@@ -1,6 +1,12 @@
 {
-  "name": "ui-kit",
-  "version": "0.1.0",
+  "name": "@wings_platform/ui-kit",
+  "version": "0.1.1",
+  "license": "GPLv3",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/WingsDao/ui-kit.git"
+  },
+  "homepage": "https://design.wings.ai/",
   "peerDependencies": {
     "@angular/common": "^7.2.0",
     "@angular/core": "^7.2.0",

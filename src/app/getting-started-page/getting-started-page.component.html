@@ -4,17 +4,52 @@
     library of components, brand guidlines and many other information.
   </div>
   <div class="page__text page-block__text ws-text-s">
-    This web-site will be updated as many times as possible and it will filled
-    with all new components, colors, fonts, logotypes etc. If you have any
-    questions, feedback or suggestions about it — you may send it to
-    @featheremail
+      We invite you to check out and contribute to our new WINGS Platform UiKit. We will be glad to welcome every participant to our opensource solution. If you have any questions, please do not hesitate to contact us.
   </div>
+
+  <h2>Basic Setup</h2>
+  <h3>Step 1: Install library</h3>
   <div class="page__text page-block__text ws-text-s">
-    Our current centralized wallet solution makes it easier than ever for our
-    users to purchase tokens from ongoing, upcoming, and concluded ICOs, as long
-    as they are endorsed by our law offices and confirmed to be good
-    investments.
+    <br />
+    <code>npm install @wings_platform/ui-kit</code>
+    <br />
+    or
+    <br />
+    <code>yarn add @wings_platform/ui-kit</code>
   </div>
+
+  <h3>Step 2: Import library module</h3>
+  <ws-demo
+    ts="
+import { NgModule } from '@angular/core';
+import { UiKitModule } from 'ui-kit';
+import { FormsModule } from '@angular/forms';
+
+...
+@NgModule({
+  ...
+  imports: [FormsModule, UiKitModule],
+  providers: [],
+  bootstrap: [AppComponent]
+})
+export class AppModule { }
+"
+  >
+    import <code>UiKitModule</code> and <code>FormsModule</code>
+  </ws-demo>
+
+  <h3>Step 3: Configure global-styles</h3>
+  <ws-demo
+    html="
+    ...
+      <ws-global-styles></ws-global-styles>
+    ...
+    "
+  >
+    import <code>ws-global-styles</code> component somewhere in a your root component template
+  </ws-demo>
+
+  <h3>Great! Now you are ready to use ui-kit components!</h3>
   <div class="page-getstart__img">
     <img
       class="getstart__img"

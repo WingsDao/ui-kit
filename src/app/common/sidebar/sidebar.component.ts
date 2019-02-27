@@ -2,6 +2,7 @@ import { Component, OnDestroy, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { untilDestroyed } from 'ngx-take-until-destroy';
 import { AppRouting } from '../../../enums/routing.enum';
+import {version} from '../../../../package.json';
 
 @Component({
   selector: 'ws-sidebar',
@@ -14,6 +15,7 @@ export class SidebarComponent implements OnInit, OnDestroy {
   visible = false;
   isMainMenuVisible = false;
   isComponentsMenuVisible = false;
+  version = version;
 
   constructor(private router: Router) {}
 
@@ -34,4 +36,6 @@ export class SidebarComponent implements OnInit, OnDestroy {
   buildRoute(routing: AppRouting) {
     return '/' + routing;
   }
+
+
 }

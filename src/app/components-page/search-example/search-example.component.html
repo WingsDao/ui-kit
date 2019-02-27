@@ -1,5 +1,14 @@
 <h1 class="page__title page-block__title ws-h1">Search</h1>
 
-<ws-demo html="<ws-search></ws-search>">
-  <ws-search></ws-search>
+<ws-demo html='
+  <ws-search [(ngModel)]="value" placeholder="Search ..."></ws-search>
+' ts='
+  ...
+  class ExampleComponent {
+    value = "";
+  }
+'>
+  <ws-search [(ngModel)]="value" placeholder="Search ..."></ws-search>
+  <br/>
+  <code>value: {{value}}</code>
 </ws-demo>

@@ -1,31 +1,11 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'ws-table',
   templateUrl: './table.component.html',
   styleUrls: ['./table.component.scss']
 })
-export class TableComponent implements OnInit {
-  isCheckedOne = false;
-  isCheckedTwo = false;
-  isFilterChecked = false;
+export class TableComponent {
 
-  constructor() { }
-
-  ngOnInit() {
-  }
-
-  onCheck() {
-
-    if (!this.isFilterChecked) {
-      this.isFilterChecked = false;
-      this.isCheckedOne = false;
-      this.isCheckedTwo = false;
-    } else {
-      this.isFilterChecked = true;
-      this.isCheckedOne = true;
-      this.isCheckedTwo = true;
-    }
-  }
 }
 

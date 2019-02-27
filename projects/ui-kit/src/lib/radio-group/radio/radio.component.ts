@@ -7,28 +7,10 @@ import { RadioGroupComponent } from '../radio-group.component';
   templateUrl: './radio.component.html',
   styleUrls: ['./radio.component.scss']
 })
-export class RadioComponent<T = any> implements OnInit, OnDestroy {
+export class RadioComponent<T = any> implements OnDestroy {
   @Input() value: T;
-  name: string;
-  selected: T;
 
-  constructor(@Host() private parent: RadioGroupComponent<T>) {}
-
-  ngOnInit() {
-    this.parent.currentName
-      .pipe(untilDestroyed(this))
-      .subscribe(groupName => this.name = groupName);
-
-    this.parent.currentSelected
-      .pipe(untilDestroyed(this))
-      .subscribe(selected => {
-        this.selected = selected;
-      });
-  }
-
-  setSelected(val: T) {
-    this.parent.selected = val;
-  }
+  constructor(@Host() public parent: RadioGroupComponent<T>) {}
 
   ngOnDestroy() {
     // To protect you, we'll throw an error if it doesn't exist.

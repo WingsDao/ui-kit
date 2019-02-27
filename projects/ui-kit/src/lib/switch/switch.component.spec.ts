@@ -7,7 +7,7 @@ import { SwitchComponent } from './switch.component';
 
 @Component({
   selector: 'ws-test-wrapper',
-  template: `<ws-switch [(value)]="isChecked"></ws-switch>`
+  template: `<ws-switch [(ngModel)]="isChecked"></ws-switch>`
 })
 export class TestWrapperComponent {
   isChecked;

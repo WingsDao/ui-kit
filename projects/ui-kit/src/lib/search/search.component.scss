@@ -1,48 +1,51 @@
-.search {
-  position: relative;
-  display: inline-block;
+:host {
+  .search {
+    position: relative;
+    display: inline-block;
+    width: 100%;
 
-  &__input {
-    height: 60px;
-    width: 480px;
-    background: var(--ws-white);
-    border-radius: 8px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-    padding-left: 52px;
-    padding-right: 32px;
-    outline: none;
-    border: none;
+    &__input {
+      height: 60px;
+      width: calc(100% - 53px - 32px);
+      background: var(--ws-white);
+      border-radius: 8px;
+      box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+      padding-left: 52px;
+      padding-right: 32px;
+      outline: none;
+      border: none;
 
-    &::-webkit-search-cancel-button {
-      -webkit-appearance: none;
+      &::-webkit-search-cancel-button {
+        -webkit-appearance: none;
+      }
     }
-  }
 
-  &__icon {
-    position: absolute;
-    width: 16px;
-    height: 16px;
-    top: 22px;
-    left: 20px;
-    background-image: url('../../assets/svg/search.svg');
-    background-repeat: no-repeat;
-    cursor: pointer;
-  }
+    &__icon {
+      position: absolute;
+      width: 16px;
+      height: 16px;
+      top: 22px;
+      left: 20px;
+      background-image: url("../../assets/svg/search.svg");
+      background-repeat: no-repeat;
+      cursor: pointer;
+    }
 
-  &__exit {
-    position: absolute;
-    width: 24px;
-    height: 24px;
-    top: 50%;
-    right: 16px;
-    transform: translateY(-50%);
-    border-radius: 50%;
-    background: var(--ws-gray-light);
-    text-align: center;
-    cursor: pointer;
+    &__exit {
+      position: absolute;
+      width: 24px;
+      height: 24px;
+      top: 50%;
+      right: 16px;
+      transform: translateY(-50%);
+      border-radius: 50%;
+      background: var(--ws-gray-light);
+      text-align: center;
+      cursor: pointer;
 
-    &:hover {
-      background: var(--ws-gray-dark);
+      &:hover {
+        background: var(--ws-gray-dark);
+      }
     }
   }
 }
