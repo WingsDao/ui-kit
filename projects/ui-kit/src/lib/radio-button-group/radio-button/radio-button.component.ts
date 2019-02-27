@@ -7,35 +7,11 @@ import { RadioButtonGroupComponent } from '../radio-button-group.component';
   templateUrl: './radio-button.component.html',
   styleUrls: ['./radio-button.component.scss']
 })
-export class RadioButtonComponent<T = any> implements OnInit, OnDestroy {
+export class RadioButtonComponent<T = any> implements OnDestroy {
   @Input() value: T;
-  name: string;
-  selected: T;
 
-  constructor(@Host() private parent: RadioButtonGroupComponent<T>) {}
-
-  ngOnInit() {
-    this.parent.currentName
-      .pipe(untilDestroyed(this))
-      .subscribe(groupName => this.name = groupName);
-
-    this.parent.currentSelected
-      .pipe(untilDestroyed(this))
-      .subscribe(selected => {
-        this.selected = selected;
-      });
-  }
+  constructor(@Host() public parent: RadioButtonGroupComponent<T>) {}
 
   ngOnDestroy() {
-  }
-
-  isChecked() {
-    return this.parent.selected === this.value;
-  }
-
-  toggle(event: Event) {
-    if ((event.target as HTMLInputElement).checked) {
-      this.parent.selected = this.value;
-    }
   }
 }

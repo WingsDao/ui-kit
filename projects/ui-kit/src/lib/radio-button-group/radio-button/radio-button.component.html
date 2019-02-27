@@ -1,5 +1,5 @@
 <li class="radio-item">
-  <input type="checkbox" [name]="name" [checked]="isChecked()" (change)="toggle($event)">
+  <input type="radio" [name]="parent.name" [(ngModel)]="parent.value" [value]="value">
   <span class="check-mark"><ng-content></ng-content></span>
 </li>
 
