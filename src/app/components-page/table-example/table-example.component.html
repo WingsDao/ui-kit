@@ -1,35 +1,38 @@
 <h1 class="page__title page-block__title ws-h1">Table</h1>
 <ws-demo
   html='
-<ws-table>
-  <tr ws-header class="ws-text-xs">
-    <th ws-filter="asc">
-        <ws-checkbox [(ngModel)]="isFilterChecked" (click)="onCheck()"></ws-checkbox>
-    </th>
-    <th>ETH address</th>
-    <th ws-filter="asc">Name</div></th>
-    <th ws-filter="asc">Country</div></th>
-    <th ws-filter="desc">KYC status</div></th>
-  </tr>
-  <tr>
-    <td>
-      <ws-checkbox [(ngModel)]="isCheckedOne"></ws-checkbox>
-    </td>
-    <td>0x1d4fc289dfdab6949cd4a41dd995571dca5b2592</td>
-    <td>Konstantin Konstantinopolsky</td>
-    <td>Russian Federation</td>
-    <td>Verified</td>
-  </tr>
-  <tr>
-    <td>
-      <ws-checkbox [(ngModel)]="isCheckedTwo"></ws-checkbox>
-    </td>
-    <td>0x1d4fc289dfdab6949cd4a41dd995571dca5b2592</td>
-    <td>Konstantin Konstantinopolsky</td>
-    <td>Russian Federation</td>
-    <td>Verified</td>
-  </tr>
-</ws-table>
+  <ws-table>
+    <tr ws-header class="ws-text-xs">
+      <th ws-filter="asc">
+        <ws-checkbox
+          [(ngModel)]="isFilterChecked"
+          (click)="onCheck()"
+        ></ws-checkbox>
+      </th>
+      <th>ETH address</th>
+      <th ws-filter="desc">Name</th>
+      <th ws-filter="asc">Country</th>
+      <th ws-filter="desc">KYC status</th>
+    </tr>
+    <tr class="ws-text-xs">
+      <td>
+        <ws-checkbox [(ngModel)]="isCheckedOne"></ws-checkbox>
+      </td>
+      <td>0x1d4fc289dfdab6949cd4a41dd995571dca5b2592</td>
+      <td>Konstantin Konstantinopolsky</td>
+      <td>Russian Federation</td>
+      <td>Verified</td>
+    </tr>
+    <tr class="ws-text-xs">
+      <td>
+        <ws-checkbox [(ngModel)]="isCheckedTwo"></ws-checkbox>
+      </td>
+      <td>0x1d4fc289dfdab6949cd4a41dd995571dca5b2592</td>
+      <td>Konstantin Konstantinopolsky</td>
+      <td>Russian Federation</td>
+      <td>Verified</td>
+    </tr>
+  </ws-table>
 '
 >
   <ws-table>

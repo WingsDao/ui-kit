@@ -2,6 +2,8 @@ import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { UiKitModule } from 'ui-kit';
+import { FormsModule } from '@angular/forms';
+
 import { AppCommonModule } from '../common/common.module';
 import { ButtonExampleComponent } from './button-example/button-example.component';
 import { CheckboxExampleComponent } from './checkbox-example/checkbox-example.component';
@@ -20,7 +22,6 @@ import { NavBarExampleComponent } from './nav-bar-example/nav-bar-example.compon
 import { FooterExampleComponent } from './footer-example/footer-example.component';
 import { ModalExampleComponent } from './modal-example/modal-example.component';
 import { DemoModule } from '../common/demo/demo.module';
-import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [

@@ -15,6 +15,50 @@
     as they are endorsed by our law offices and confirmed to be good
     investments.
   </div>
+
+  <h2>Basic Setup</h2>
+  <h3>Step 1: Install library</h3>
+  <div class="page__text page-block__text ws-text-s">
+    <br />
+    <code>npm install @wingsplaftorm/ui-kit</code>
+    <br />
+    or
+    <br />
+    <code>yarn add @wingsplaftorm/ui-kit</code>
+  </div>
+
+  <h3>Step 2: Import library module</h3>
+  <ws-demo
+    ts="
+import { NgModule } from '@angular/core';
+import { UiKitModule } from 'ui-kit';
+import { FormsModule } from '@angular/forms';
+
+...
+@NgModule({
+  ...
+  imports: [FormsModule, UiKitModule],
+  providers: [],
+  bootstrap: [AppComponent]
+})
+export class AppModule { }
+"
+  >
+    import <code>UiKitModule</code> and <code>FormsModule</code>
+  </ws-demo>
+
+  <h3>Step 3: Configure global-styles</h3>
+  <ws-demo
+    html="
+    ...
+      <ws-global-styles></ws-global-styles>
+    ...
+    "
+  >
+    import <code>ws-global-styles</code> component somewhere in a your root component template
+  </ws-demo>
+
+  <h3>Great! Now you are ready to use ui-kit components!</h3>
   <div class="page-getstart__img">
     <img
       class="getstart__img"
