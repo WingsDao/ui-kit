@@ -25,6 +25,12 @@
       ],
       "ui-kit/*": [
         "dist/ui-kit/*"
+      ],
+      "@wings_platform/ui-kit": [
+        "dist/ui-kit"
+      ],
+      "@wings_platform/ui-kit/*": [
+        "dist/ui-kit/*"
       ]
     }
   }
