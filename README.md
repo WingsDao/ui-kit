@@ -47,4 +47,4 @@ We use [SemVer](http://semver.org/) for versioning. For the versions available, 
 
 ## License
 
-- GPLv3
+- [GPLv3](LICENCE)
