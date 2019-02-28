@@ -1,15 +1,10 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'ws-icon',
   templateUrl: './icon.component.html',
   styleUrls: ['./icon.component.scss']
 })
-export class IconComponent implements OnInit {
-
-  constructor() { }
-
-  ngOnInit() {
-  }
-
+export class IconComponent {
+  @Input() svgPath: string;
 }
