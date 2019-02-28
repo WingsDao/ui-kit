@@ -1,4 +1,6 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { InlineSVGModule } from 'ng-inline-svg';
+import { HttpClientModule } from '@angular/common/http';
 
 import { ModalComponent } from './modal.component';
 import { IconComponent } from '../icon/icon.component';
@@ -10,7 +12,8 @@ describe('ModalComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ ModalComponent, IconComponent, ModalHeaderComponent ]
+      declarations: [ ModalComponent, IconComponent, ModalHeaderComponent ],
+      imports: [InlineSVGModule, HttpClientModule]
     })
     .compileComponents();
   }));
