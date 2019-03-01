@@ -15,7 +15,6 @@ import { PalettesPageComponent } from './palettes-page/palettes-page.component';
 import { TypographyPageComponent } from './typography-page/typography-page.component';
 import { DemoModule } from './common/demo/demo.module';
 
-
 @NgModule({
   declarations: [
     AppComponent,

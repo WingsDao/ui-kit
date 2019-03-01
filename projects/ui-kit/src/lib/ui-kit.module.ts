@@ -22,6 +22,8 @@ import { FooterComponent } from './footer/footer.component';
 import { ModalComponent } from './modal/modal.component';
 import { ModalHeaderComponent } from './modal/header/modal-header.component';
 import { ModalRouterComponent } from './modal/router/modal-router.component';
+import { InlineSVGModule } from 'ng-inline-svg';
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
@@ -50,7 +52,9 @@ import { ModalRouterComponent } from './modal/router/modal-router.component';
   ],
   imports: [
     CommonModule,
-    FormsModule
+    FormsModule,
+    InlineSVGModule.forRoot(),
+    HttpClientModule
   ],
   exports: [
     InputComponent,

@@ -1,10 +1,10 @@
 :host {
-  div {
+  span {
     width: 40px;
     height: 40px;
     background: var(--ws-black);
     border-radius: 50%;
-    display: flex;
+    display: inline-flex;
     justify-content: center;
     align-items: center;
     cursor: pointer;
@@ -12,5 +12,21 @@
     &:hover {
       background: var(--ws-gray-dark);
     }
+  }
+
+  &[size="medium"] > span {
+    width: 33px;
+    height: 33px;
+  }
+
+  &[size="small"] > span {
+    width: 25px;
+    height: 25px;
+  }
+
+  & /deep/ svg {
+    fill: var(--ws-white);
+    width: 50%;
+    height: 50%;
   }
 }

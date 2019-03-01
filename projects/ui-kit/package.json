@@ -1,6 +1,6 @@
 {
   "name": "@wings_platform/ui-kit",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "license": "GPLv3",
   "repository": {
     "type": "git",
@@ -11,6 +11,7 @@
     "@angular/common": "^7.2.0",
     "@angular/core": "^7.2.0",
     "@angular/forms": "^7.2.0",
-    "ngx-take-until-destroy": "^5.4.0"
+    "ngx-take-until-destroy": "^5.4.0",
+    "ng-inline-svg": "^8.3.0"
   }
 }

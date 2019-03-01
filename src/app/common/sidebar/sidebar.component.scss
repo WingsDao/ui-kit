@@ -62,6 +62,12 @@
   align-self: end;
 }
 
+.menu__social {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 20px;
+}
+
 .copyright {
   display: block;
   padding-bottom: 24px;
