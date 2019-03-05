@@ -12,3 +12,30 @@
 >
   <ws-help (click)="onClick()">Help</ws-help>
 </ws-demo>
+
+<ws-demo
+  html='<ws-help (click)="onClick()" size="m">Help</ws-help>'
+  ts="
+  ...
+  class ExampleComponent {
+    onClick() {
+      alert('clicked');
+    }
+  }
+  "
+>
+  <ws-help (click)="onClick()" size="m">Help</ws-help>
+</ws-demo>
+<ws-demo
+  html='<ws-help (click)="onClick()" size="s">Help</ws-help>'
+  ts="
+  ...
+  class ExampleComponent {
+    onClick() {
+      alert('clicked');
+    }
+  }
+  "
+>
+  <ws-help (click)="onClick()" size="s">Help</ws-help>
+</ws-demo>

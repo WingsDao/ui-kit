@@ -16,3 +16,37 @@
   selected: <code>{{selected}}</code>
 </ws-demo>
 
+<ws-demo
+  html='
+  <ws-radio-group [(ngModel)]="selected" name="myOption" size="m">
+    <ws-radio value="1">option 1</ws-radio>
+    <ws-radio value="2">option 2</ws-radio>
+    <ws-radio value="3">option 3</ws-radio>
+  </ws-radio-group>
+  '
+>
+  <ws-radio-group [(ngModel)]="selected" name="myOption" size="m">
+    <ws-radio value="1">option 1</ws-radio>
+    <ws-radio value="2">option 2</ws-radio>
+    <ws-radio value="3">option 3</ws-radio>
+  </ws-radio-group>
+  selected: <code>{{selected}}</code>
+</ws-demo>
+
+<ws-demo
+  html='
+  <ws-radio-group [(ngModel)]="selected" name="myOption" size="s">
+    <ws-radio value="1" >option 1</ws-radio>
+    <ws-radio value="2">option 2</ws-radio>
+    <ws-radio value="3">option 3</ws-radio>
+  </ws-radio-group>
+  '
+>
+  <ws-radio-group [(ngModel)]="selected" name="myOption" size="s">
+    <ws-radio value="1">option 1</ws-radio>
+    <ws-radio value="2">option 2</ws-radio>
+    <ws-radio value="3">option 3</ws-radio>
+  </ws-radio-group>
+  selected: <code>{{selected}}</code>
+</ws-demo>
+

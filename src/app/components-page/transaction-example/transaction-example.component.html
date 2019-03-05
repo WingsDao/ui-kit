@@ -1,12 +1,18 @@
 <h1 class="page__title page-block__title ws-h1">Transaction</h1>
 <ws-demo
-  html='<ws-transaction href="/brand">Transaction</ws-transaction>'
+  html='<ws-transaction href="/brand">Transaction</ws-transaction>
+ <ws-transaction href="/brand" size="m">Transaction</ws-transaction>
+ <ws-transaction href="/brand" size="s">Transaction</ws-transaction>'
 >
   <ws-transaction href="/brand">Transaction</ws-transaction>
+  <ws-transaction href="/brand" size="m">Transaction</ws-transaction>
+  <ws-transaction href="/brand" size="s">Transaction</ws-transaction>
 </ws-demo>
 
 <ws-demo
-  html='<ws-transaction error (click)="onClick()">Transaction</ws-transaction>'
+  html='<ws-transaction error (click)="onClick()">Transaction</ws-transaction>
+ <ws-transaction error (click)="onClick()" size="m">Transaction</ws-transaction>
+ <ws-transaction error (click)="onClick()" size="s">Transaction</ws-transaction>'
   ts='
   ...
   export class ExampleComponent {
@@ -17,4 +23,6 @@
 '
 >
   <ws-transaction error (click)="onClick()">Transaction</ws-transaction>
+  <ws-transaction error (click)="onClick()" size="m">Transaction</ws-transaction>
+  <ws-transaction error (click)="onClick()" size="s">Transaction</ws-transaction>
 </ws-demo>

@@ -3,11 +3,11 @@
   display: block;
   cursor: pointer;
   margin-bottom: 16px;
-
-&:hover input ~ .checkmark {
+  
+  &:hover input ~ .checkmark {
     border: 1px solid var(--ws-blue-light);
   }
-
+  
   & input:checked ~ .checkmark {
     border: 6px solid var(--ws-blue-light);
   }
@@ -30,4 +30,3 @@
   left: 0;
   opacity: 0;
 }
-

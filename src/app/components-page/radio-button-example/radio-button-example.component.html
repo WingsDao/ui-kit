@@ -13,7 +13,39 @@
     <ws-radio-button value="2">option 2</ws-radio-button>
     <ws-radio-button value="3">option 3</ws-radio-button>
   </ws-radio-button-group>
-  selected: <code>{{selected}}</code>
+  <p>selected: <code>{{selected}}</code></p>
 </ws-demo>
 
+<ws-demo
+  html='
+  <ws-radio-button-group [(ngModel)]="selected" name="my-option" size="m">
+    <ws-radio-button value="1">option 1</ws-radio-button>
+    <ws-radio-button value="2">option 2</ws-radio-button>
+    <ws-radio-button value="3">option 3</ws-radio-button>
+  </ws-radio-button-group>
+  '
+>
+  <ws-radio-button-group [(ngModel)]="selected" name="my-option" size="m">
+    <ws-radio-button value="1">option 1</ws-radio-button>
+    <ws-radio-button value="2">option 2</ws-radio-button>
+    <ws-radio-button value="3">option 3</ws-radio-button>
+  </ws-radio-button-group>
+  <p>selected: <code>{{selected}}</code></p>
+</ws-demo>
 
+<ws-demo
+  html='
+  <ws-radio-button-group [(ngModel)]="selected" name="my-option" size="s">
+    <ws-radio-button value="1">option 1</ws-radio-button>
+    <ws-radio-button value="2">option 2</ws-radio-button>
+    <ws-radio-button value="3">option 3</ws-radio-button>
+  </ws-radio-button-group>
+  '
+>
+  <ws-radio-button-group [(ngModel)]="selected" name="my-option" size="s">
+    <ws-radio-button value="1">option 1</ws-radio-button>
+    <ws-radio-button value="2">option 2</ws-radio-button>
+    <ws-radio-button value="3">option 3</ws-radio-button>
+  </ws-radio-button-group>
+  <p>selected: <code>{{selected}}</code></p>
+</ws-demo>

@@ -12,7 +12,7 @@
   height: 100vh;
   box-sizing: border-box;
 	display: grid;
-	grid-template-rows: 150px auto 70px;
+	grid-template-rows: 150px auto 200px;
 	padding: 50px 32px 0;
   border-right: 1px solid #F7F7F7;
   z-index: 1;
@@ -128,7 +128,7 @@
     width: 100%;
     position: absolute;
     top: 0;
-    padding: 17px 0;
+    padding: 16px 0;
     box-sizing: border-box;
     box-shadow: 0px 1px 0px rgba(0, 0, 0, 0.04);
     background: var(--ws-white);
@@ -176,10 +176,15 @@
     transform: translateY(-7px) rotate(-45deg);
   }
 
-  .menu__logo-img {
-    height: 100%;
+  .menu__logo--mobile {
+    height: 46px;
+    width: 46px;
     margin: 0 auto;
     display: block;
+  }
+
+  .menu__logo-img {
+    height: 100%;
   }
 
   .menu__footer {

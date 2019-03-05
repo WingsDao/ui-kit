@@ -1,37 +1,55 @@
-button {
-  border: none;
-  width: 160px;
-  height: 48px;
-  border-radius: 80px;
-  background: var(--ws-black);
-  color: var(--ws-white);
-  position: relative;
-  font-size: 16px;
-  padding-left: 24px;
-  cursor: pointer;
-
-  &:hover {
-    background: var(--ws-gray-dark);
+:host {
+  button {
+    border: none;
+    width: 160px;
+    height: 48px;
+    border-radius: 80px;
+    background: var(--ws-black);
+    color: var(--ws-white);
+    position: relative;
+    font-size: 16px;
+    padding-left: 24px;
+    cursor: pointer;
+    
+    &:hover {
+      background: var(--ws-gray-dark);
+    }
+    
+    &:focus {
+      outline: none;
+    }
+    
+    &::before {
+      content: '\003F';
+      position: absolute;
+      top: 50%;
+      left: 13px;
+      transform: translateY(-50%);
+      display: block;
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      font-size: 14px;
+      font-weight: 800;
+      font-family: 'Open Sans', sans-serif;
+      box-sizing: border-box;
+      border: 2px solid var(--ws-white);
+    }
+  }
+  &[size="m"] > button {
+    width: 130px;
+    height: 40px;
   }
 
-  &:focus {
-    outline: none;
-  }
-
-  &::before {
-    content: '\003F';
-    position: absolute;
-    top: 50%;
-    left: 13px;
-    transform: translateY(-50%);
-    display: block;
-    width: 24px;
-    height: 24px;
-    border-radius: 50%;
+  &[size="s"] > button {
+    width: 100px;
+    height: 32px;
     font-size: 14px;
-    font-weight: 800;
-    font-family: 'Open Sans', sans-serif;
-    box-sizing: border-box;
-    border: 2px solid var(--ws-white);
+    &::before {
+      display: block;
+      width: 20px;
+      height: 20px;
+      font-size: 12px;
+    }
   }
 }

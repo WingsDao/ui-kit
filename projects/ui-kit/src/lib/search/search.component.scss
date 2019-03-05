@@ -3,7 +3,7 @@
     position: relative;
     display: inline-block;
     width: 100%;
-
+    
     &__input {
       height: 60px;
       width: calc(100% - 53px - 32px);
@@ -14,23 +14,24 @@
       padding-right: 32px;
       outline: none;
       border: none;
-
+      
       &::-webkit-search-cancel-button {
         -webkit-appearance: none;
       }
     }
-
+    
     &__icon {
       position: absolute;
       width: 16px;
       height: 16px;
-      top: 22px;
+      top: 50%;
+      transform: translateY(-50%);
       left: 20px;
       background-image: url("../../assets/svg/search.svg");
       background-repeat: no-repeat;
       cursor: pointer;
     }
-
+    
     &__exit {
       position: absolute;
       width: 24px;
@@ -42,10 +43,21 @@
       background: var(--ws-gray-light);
       text-align: center;
       cursor: pointer;
-
+      
       &:hover {
         background: var(--ws-gray-dark);
       }
+    }
+  }
+  
+  &[size="m"] {
+    .search__input {
+      height: 48px;      
+    }    
+  }
+  &[size="s"] {
+    .search__input {
+      height: 36px;      
     }
   }
 }

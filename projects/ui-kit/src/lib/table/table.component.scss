@@ -62,5 +62,29 @@
     th[ws-filter] {
       cursor: pointer;
     }
+
+    ws-checkbox > .switch {
+      display: initial;
+    }
+  }
+
+  &[size="m"] /deep/ table {
+    th {
+      height: 44px;
+    }
+
+    td {      
+      height: 48px;
+    }
+  }
+
+  &[size="s"] /deep/ table {
+    th {
+      height: 40px;
+    }
+
+    td {      
+      height: 44px;
+    }
   }
 }

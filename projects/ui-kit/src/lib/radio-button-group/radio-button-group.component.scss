@@ -1,9 +1,32 @@
-.radio-items {
-  border-radius: 6px;
-  overflow: hidden;
-  border: 1px solid var(--ws-blue);
-  margin: 0;
-  padding: 0;
-  display: inline-block;
-  white-space: nowrap;
+:host {
+  .radio-items {
+    border-radius: 6px;
+    overflow: hidden;
+    border: 1px solid var(--ws-blue);
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+    white-space: nowrap;
+  }
+  
+  &[size="m"] /deep/ {
+    .check-mark {
+      line-height: 48px;
+    }    
+    .radio-item {
+      min-width: 132px;
+      height: 48px;
+    }
+  }
+  
+  &[size="s"]/deep/ {
+    .check-mark {
+      line-height: 36px;
+      font-size: 14px;
+    }     
+    .radio-item {
+      min-width: 100px;
+      height: 36px;
+    }
+  }
 }

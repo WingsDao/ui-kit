@@ -8,7 +8,9 @@
     <span></span>
     <span></span>
   </div>
-  <img class="menu__logo-img" src="/assets/svg/pen-color.svg" alt="logo" />
+  <a [routerLink]="buildRoute(ROUTING.Home)" class="menu__logo--mobile">
+    <img class="menu__logo-img" src="/assets/svg/pen-color.svg" alt="logo" />
+  </a>
 </div>
 <div class="menu menu-navigation" [class.visible]="isMainMenuVisible">
   <a [routerLink]="buildRoute(ROUTING.Home)" class="menu__logo">

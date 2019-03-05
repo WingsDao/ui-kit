@@ -1,52 +1,72 @@
-button {
-  height: 60px;
-  width: 240px;
-  border-radius: 6px;
-  padding: 20px;
-  background: var(--ws-blue);
-  border: none;
-  font-size: 14px;
-  color: var(--ws-white);
-  cursor: pointer;
-
-  &:hover {
-    background: var(--ws-blue-light);
+:host {
+  button {
+    height: 60px;
+    width: 240px;
+    border-radius: 6px;
+    background: var(--ws-blue);
+    border: none;
+    font-size: 14px;
+    color: var(--ws-white);
+    vertical-align: top;
+    cursor: pointer;
+    
+    &:hover {
+      background: var(--ws-blue-light);
+    }
+    
+    &:active {
+      outline: none;
+      background: var(--ws-blue-dark);
+    }
+    
+    &:focus {
+      outline: none;
+    }    
+    
+    &.disabled {
+      background: var(--ws-gray-light);
+      color: var(--ws-gray-dark);
+    }
+    
+    &.loading {
+      background-color: var(--ws-blue);
+      background-image: url('../../assets/svg/spinner_white.svg');
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: 24px;
+    }
   }
+  
+  &[size="m"] > button {
+    height: 48px;
+    width: 200px;  
 
-  &:active {
-    outline: none;
-    background: var(--ws-blue-dark);
+    &.loading {
+      background-size: 20px;
+    }  
   }
-
-  &:focus {
-    outline: none;
+  
+  &[size="s"] > button{
+    height: 36px;
+    width: 160px;
+    font-size: 12px;
+    
+    &.loading {
+      background-size: 16px;
+    }
   }
-}
-
-button.disabled {
-  background: var(--ws-gray-light);
-  color: var(--ws-gray-dark);
-}
-
-button.loading {
-  background-color: var(--ws-blue);
-  background-image: url('../../assets/svg/spinner_white.svg');
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: 24px;
 }
 
 :host[ghost] {
   button {
     background: transparent;
     border: 1px solid var(--ws-blue);
-    box-sizing: border-box;
     color: var(--ws-blue);
-
+    
     &:hover {
       background: #E6F7FB;
     }
-
+    
     &:active {
       border: 1px solid var(--ws-blue-dark);
       color: var(--ws-blue-dark);

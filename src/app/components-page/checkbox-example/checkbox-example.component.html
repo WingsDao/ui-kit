@@ -1,6 +1,18 @@
 <h1 class="page__title page-block__title ws-h1">Checkbox</h1>
-<ws-demo html="<ws-checkbox [(ngModel)]='isChecked'>Some value</ws-checkbox>">
+<ws-demo html='<ws-checkbox [(ngModel)]="isChecked">Some value</ws-checkbox>'>
+  <p>Default size checkbox</p>
   <ws-checkbox [(ngModel)]="isChecked">Some value</ws-checkbox>
-  <br />
-  isChecked: <code> {{ isChecked }} </code>
+  <p>isChecked: <code> {{ isChecked }} </code></p>
+</ws-demo>
+
+<ws-demo html='<ws-checkbox [(ngModel)]="isChecked" size="m">Some value</ws-checkbox>'>
+  <p>Medium size checkbox</p>
+  <ws-checkbox [(ngModel)]="isChecked" size="m">Some value</ws-checkbox>
+  <p>isChecked: <code> {{ isChecked }} </code></p>
+</ws-demo>
+
+<ws-demo html='<ws-checkbox [(ngModel)]="isChecked" size="s">Some value</ws-checkbox>'>
+  <p>Small size checkbox</p>
+  <ws-checkbox [(ngModel)]="isChecked" size="s">Some value</ws-checkbox>
+  <p>isChecked: <code> {{ isChecked }} </code></p>
 </ws-demo>
