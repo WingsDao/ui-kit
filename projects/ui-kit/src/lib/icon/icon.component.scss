@@ -14,14 +14,14 @@
     }
   }
 
-  &[size="medium"] > span {
-    width: 33px;
-    height: 33px;
+  &[size="m"] > span {
+    width: 36px;
+    height: 36px;
   }
 
-  &[size="small"] > span {
-    width: 25px;
-    height: 25px;
+  &[size="s"] > span {
+    width: 24px;
+    height: 24px;
   }
 
   & /deep/ svg {

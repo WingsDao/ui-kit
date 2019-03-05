@@ -35,22 +35,17 @@ html, body {
   margin-bottom: 15px;
 }
 
-.page-block__title {
+.page__title {
   margin-top: 0;
   margin-bottom: 32px;
 }
 
 .page__subtitle {
   max-width: 600px;
-  margin: 0 auto;
 }
 
 .page__text {
-  max-width: 238px;
-}
-
-.page-block__text {
-  max-width: 100%;
+  max-width: 600px;
   margin-top: 25px;
 }
 

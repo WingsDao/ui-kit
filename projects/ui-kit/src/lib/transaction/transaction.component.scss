@@ -1,66 +1,86 @@
-a {
-  text-decoration: none;
-  display: inline-block;
-  height: 48px;
-  padding: 0 24px;
-  background: var(--ws-white);
-  border: 1px solid #f0fafd;
-  box-sizing: border-box;
-  border-radius: 96px;
-  font-size: 14px;
-  line-height: 48px;
-  text-align: center;
-  color: var(--ws-blue);
-  cursor: pointer;
-
-  &::after {
-    content: '';
-    display: block;
-    border-top: 1px dashed transparent;
-    width: calc(100% - 20px);
-    margin-top: -15px;
-  }
-
-  &:hover {
-    border: 1px solid var(--ws-blue);
-
+:host {
+  .link {
+    text-decoration: none;
+    display: inline-block;
+    height: 48px;
+    padding: 0 24px;
+    background: var(--ws-white);
+    border: 1px solid #f0fafd;
+    box-sizing: border-box;
+    border-radius: 96px;
+    font-size: 14px;
+    line-height: 48px;
+    text-align: center;
+    color: var(--ws-blue);
+    cursor: pointer;
+    
     &::after {
-      border-top: 1px dashed var(--ws-blue);
+      content: '';
+      display: block;
+      border-top: 1px dashed transparent;
+      width: calc(100% - 20px);
+      margin-top: -16px;
     }
-  }
+    
+    &:hover {
+      border: 1px solid var(--ws-blue);      
+      &::after {
+        border-top: 1px dashed var(--ws-blue);
+      }
+    }
+    
+    svg {
+      margin-left: 8px;
+      & > .box {
+        fill: var(--ws-blue);
+      }      
+      & > rect {
+        fill: var(--ws-blue);
+        stroke: var(--ws-blue);
+      }
+    }
+  }  
+}
 
-  svg {
-    margin-left: 8px;
-  }
-
-  svg > .box {
-    fill: var(--ws-blue);
-  }
-
-  svg > rect {
-    fill: var(--ws-blue);
-    stroke: var(--ws-blue);
+:host[size="m"] {
+  .link {
+    height: 40px;
+    line-height: 40px;
+    padding: 0 20px;
+    &::after {
+      margin-top: -12px;
+    }
   }
 }
 
+:host[size="s"] {
+  .link {
+    height: 36px;
+    line-height: 36px;
+    padding: 0 16px;
+    &::after {
+      margin-top: -10px;
+    }
+  }
+}
 
 :host[error] {
-  a {
-    border: 1px solid var(--ws-red);
+  .link  {
+    border: 1px solid #ff51751a;
     color: var(--ws-red);
-
-    &:focus {
-      outline: none;
+    
+    &:hover {
+      border: 1px solid var(--ws-red);
     }
-
+    
     &::after {
       content: none;
     }
-
+    
     svg > .box {
       fill: var(--ws-red);
     }
-
+    
     svg > rect {
       fill: var(--ws-red);
       stroke: var(--ws-red);

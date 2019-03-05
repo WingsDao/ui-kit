@@ -1,25 +1,39 @@
 <h1 class="page__title page-block__title ws-h1">Buttons</h1>
-<div class="page__subtitle ws-text-l">
-  Subtitle. Our current centralized wallet solution makes it easier than ever for our users to purchase tokens from ongoing, upcoming, and concluded ICO.
-</div>
+<div class="page__subtitle ws-text-l"></div>
 
-<ws-demo html="<ws-button (click)='onClick($event)'>Button</ws-button>">
+<ws-demo html='<ws-button (click)="onClick($event)">Button</ws-button>
+ <ws-button (click)="onClick($event)" size="m">Button</ws-button>
+ <ws-button (click)="onClick($event)" size="s">Button</ws-button>'>
   <ws-button (click)="onClick($event)">Button</ws-button>
+  <ws-button (click)="onClick($event)" size="m">Button</ws-button>
+  <ws-button (click)="onClick($event)" size="s">Button</ws-button>
 </ws-demo>
 
 <ws-demo
-  html="<ws-button ghost (click)=onClick($event)>Ghost</ws-button>">
+  html='<ws-button ghost (click)=onClick($event)>Ghost</ws-button>
+ <ws-button ghost (click)=onClick($event) size="m">Ghost</ws-button>
+ <ws-button ghost (click)=onClick($event) size="s">Ghost</ws-button>'>
   <ws-button ghost (click)=onClick($event)>Ghost</ws-button>
+  <ws-button ghost (click)=onClick($event) size="m">Ghost</ws-button>
+  <ws-button ghost (click)=onClick($event) size="s">Ghost</ws-button>
 </ws-demo>
 
 <ws-demo
-  html='<ws-button [disabled]="true" (click)=onClick($event)>Disabled</ws-button>'
+  html='<ws-button [disabled]="true" (click)=onClick($event)>Disabled</ws-button>
+ <ws-button [disabled]="true" (click)=onClick($event) size="m">Disabled</ws-button>
+ <ws-button [disabled]="true" (click)=onClick($event) size="s">Disabled</ws-button>'
 >
   <ws-button [disabled]="true" (click)=onClick($event)>Disabled</ws-button>
+  <ws-button [disabled]="true" (click)=onClick($event) size="m">Disabled</ws-button>
+  <ws-button [disabled]="true" (click)=onClick($event) size="s">Disabled</ws-button>
 </ws-demo>
 
 <ws-demo
-  html='<ws-button [loading]="true" (click)=onClick($event)>Loading</ws-button>'
+  html='<ws-button [loading]="true" (click)=onClick($event)>Loading</ws-button>
+ <ws-button [loading]="true" (click)=onClick($event) size="m">Loading</ws-button>
+ <ws-button [loading]="true" (click)=onClick($event) size="s">Loading</ws-button>'
 >
   <ws-button [loading]="true" (click)=onClick($event)>Loading</ws-button>
+  <ws-button [loading]="true" (click)=onClick($event) size="m">Loading</ws-button>
+  <ws-button [loading]="true" (click)=onClick($event) size="s">Loading</ws-button>
 </ws-demo>

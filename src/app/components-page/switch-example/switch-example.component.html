@@ -2,7 +2,21 @@
 <ws-demo
   html='<ws-switch [(ngModel)]="isChecked">24h format</ws-switch>'
 >
+    <p>Default size switch</p>
     <ws-switch [(ngModel)]="isChecked">24h format</ws-switch>
-    <br>
-    isChecked: <code>{{isChecked}}</code>
+    <p>isChecked: <code>{{isChecked}}</code></p>
+</ws-demo>
+<ws-demo
+  html='<ws-switch [(ngModel)]="isChecked" size="m">24h format</ws-switch>'
+>
+    <p>Medium size switch</p>
+    <ws-switch [(ngModel)]="isChecked" size="m">24h format</ws-switch>
+    <p>isChecked: <code>{{isChecked}}</code></p>
+</ws-demo>
+<ws-demo
+  html='<ws-switch [(ngModel)]="isChecked" size="s">24h format</ws-switch>'
+>
+    <p>Small size switch</p>
+    <ws-switch [(ngModel)]="isChecked" size="s">24h format</ws-switch>
+    <p>isChecked: <code>{{isChecked}}</code></p>
 </ws-demo>

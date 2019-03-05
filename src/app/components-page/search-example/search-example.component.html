@@ -9,6 +9,27 @@
   }
 '>
   <ws-search [(ngModel)]="value" placeholder="Search ..."></ws-search>
-  <br/>
-  <code>value: {{value}}</code>
+  <p><code>value: {{value}}</code></p>
+</ws-demo>
+<ws-demo html='
+  <ws-search [(ngModel)]="value" placeholder="Search ..." size="m"></ws-search>
+' ts='
+  ...
+  class ExampleComponent {
+    value = "";
+  }
+'>
+  <ws-search [(ngModel)]="value" placeholder="Search ..." size="m"></ws-search>
+  <p><code>value: {{value}}</code></p>
+</ws-demo>
+<ws-demo html='
+  <ws-search [(ngModel)]="value" placeholder="Search ..." size="s"></ws-search>
+' ts='
+  ...
+  class ExampleComponent {
+    value = "";
+  }
+'>
+  <ws-search [(ngModel)]="value" placeholder="Search ..." size="s"></ws-search>
+  <p><code>value: {{value}}</code></p>
 </ws-demo>

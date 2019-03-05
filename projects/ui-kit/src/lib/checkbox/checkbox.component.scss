@@ -1,5 +1,8 @@
-label {
+.switch {
   position: relative;
+  display: inline-flex;
+  align-items: center;
+  line-height: initial;
   cursor: pointer;
 }
 
@@ -23,11 +26,11 @@ input {
   border: 1px solid var(--ws-gray-light);
   box-sizing: border-box;
   border-radius: 6px;
-
+  
   input:hover ~ & {
     border: 1px solid var(--ws-blue-light);
   }
-
+  
   input:checked + & {
     background: url("../../assets/svg/check.svg"), var(--ws-blue);
     border-color: var(--ws-blue);
@@ -38,3 +41,32 @@ input {
   }
 }
 
+:host {
+  &[size="m"] input:checked + .checkbox {
+    background-size: 12px 8px;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  
+  &[size="s"] input:checked + .checkbox {
+    background-size: 8px 8px;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  
+  &[size="m"] > label {
+    
+    .checkbox {
+      width: 20px;
+      height: 20px;
+    }
+  }
+  
+  &[size="s"] > label {
+    
+    .checkbox {
+      width: 16px;
+      height: 16px;
+    }
+  }
+}

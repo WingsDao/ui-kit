@@ -1,5 +1,5 @@
-<label class="ws-text-s" (click)="toggle()">
+<label class="switch ws-text-s" (click)="toggle()">
   <input type="checkbox" [(ngModel)]="value">
   <span class="checkbox"></span>
-  <ng-content></ng-content>
+  <span><ng-content></ng-content></span>
 </label>
