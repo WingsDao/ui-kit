@@ -1,23 +1,51 @@
 <h1 class="page__title page-block__title ws-h1">Input fields</h1>
 <ws-demo
-  html='<ws-input label="Some label" message="Normal message" type="text" [(ngModel)]="value"></ws-input>
- <ws-input label="Some label" message="Normal message" type="text" size="m"></ws-input>'
+  html='
+  <ws-input label="Some label" message="Normal message" type="text" [(ngModel)]="value"></ws-input>
+  <br>
+  <ws-input label="Some label" message="Normal message" type="text" size="m"></ws-input>
+  <br>
+  <ws-input label="Some label" message="Normal message" type="text" size="s"></ws-input>
+  '
 >
   <ws-input label="Some label" message="Normal message" type="text" [(ngModel)]="value"></ws-input>
-  <ws-input label="Some label" message="Normal message" type="text" size="m"></ws-input>
+  <br>
+  <ws-input label="Some label" message="Normal message" type="text" [(ngModel)]="value" size="m"></ws-input>
+  <br>
+  <ws-input label="Some label" message="Normal message" type="text" [(ngModel)]="value" size="s"></ws-input>
   <p>value: <code>{{value}}</code></p>
 </ws-demo>
 
 <ws-demo
-  html='<ws-input [disabled]="true" label="Dont allow to text here" disabled></ws-input>'
+  html='
+  <ws-input [disabled]="true" [label]="&apos;Dont allow to text here&apos;" disabled></ws-input>
+  <br>
+  <ws-input [disabled]="true" [label]="&apos;Disabled input&apos;" disabled size="m"></ws-input>
+  <br>
+  <ws-input [disabled]="true" [label]="&apos;Disabled input&apos;" disabled size="s"></ws-input>
+  '
 >
-  <ws-input [disabled]="true" [label]="'Disabled input'" disabled></ws-input>
+  <ws-input [disabled]="true" label="Disabled input" disabled></ws-input>
+  <br>
+  <ws-input [disabled]="true" [label]="'Disabled input'" disabled size="m"></ws-input>
+  <br>
+  <ws-input [disabled]="true" [label]="'Disabled input'" disabled size="s"></ws-input>
 </ws-demo>
 
 <ws-demo
-  html='<ws-input [error]="true" [label]="Enter right text here" [message]="Error message" ></ws-input>'
+  html='
+  <ws-input [error]="true" [label]="&apos;Enter right text here&apos;" [message]="&apos;Error message&apos;" ></ws-input>
+  <br>
+  <ws-input [error]="true" [label]="&apos;Enter right text here&apos;" [message]="&apos;Error message&apos;" size="m"></ws-input>
+  <br>
+  <ws-input [error]="true" [label]="&apos;Enter right text here&apos;" [message]="&apos;Error message&apos;" size="s"></ws-input>
+  '
 >
-  <ws-input [error]="true" [label]="'Enter right text here'" [message]="'Error message'" ></ws-input>
+  <ws-input [error]="true" [label]="'Enter right text here'" [message]="'Error message'"></ws-input>
+  <br>
+  <ws-input [error]="true" [label]="'Enter right text here'" [message]="'Error message'" size="m"></ws-input>
+  <br>
+  <ws-input [error]="true" [label]="'Enter right text here'" [message]="'Error message'" size="s"></ws-input>
 </ws-demo>
 
 

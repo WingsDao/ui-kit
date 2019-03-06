@@ -3,7 +3,7 @@
     position: relative;
     display: inline-block;
   }
-  
+
   input {
     height: 60px;
     background: var(--ws-white);
@@ -15,19 +15,19 @@
     max-width: 450px;
     transition: all 0.3s;
     color: var(--ws-gray-dark);
-    
+
     &:hover, &:focus {
       border: 1px solid var(--ws-blue);
       box-shadow: 0 4px 8px rgba(0, 153, 188, 0.2);
     }
-    
+
     &:focus {
       outline: none;
       padding-top: 28px;
       color: #222222;
       font-weight: 600;
     }
-    
+
     & ~ .label {
       position: absolute;
       top: 0;
@@ -38,73 +38,92 @@
       font-size: 14px;
       opacity: 1;
     }
-    
+
     &:focus ~ .label {
       top: 12px;
       color: var(--ws-blue);
       font-size: 12px;
       line-height: 20px;
     }
-    
+
     &.not-empty ~ .label {
       visibility: hidden;
       opacity: 0;
     }
-    
+
     &.not-empty:focus ~ .label {
       visibility: inherit;
       opacity: 1;
     }
-    
+
     & ~ .message {
       margin-top: 8px;
       display: block;
       color: var(--ws-gray-dark);
     }
-    
+
     &.disabled {
       background: var(--ws-gray-bg);
       border: 1px solid #DCE5EB;
       box-sizing: border-box;
       border-radius: 6px;
-      
+
       &:hover, &:focus {
         box-shadow: none;
       }
     }
-    
+
     &.error {
       border: 1px solid var(--ws-red);
-      
+
       &:hover, &:focus {
         box-shadow: none;
       }
-      
+
       & ~ .message {
         color: var(--ws-red);
       }
-      
+
       &:focus ~ .label {
         color: var(--ws-red);
       }
     }
-  }  
+  }
 }
 
 :host[size="m"] {
   input {
     height: 48px;
-    
+
     &:focus {
       padding-top: 16px;
     }
-    
+
     & ~ .label {
       line-height: 48px;
     }
-    
+
     &:focus ~ .label {
       top: 6px;
+      line-height: initial;
+    }
+  }
+}
+
+:host[size="s"] {
+  input {
+    height: 42px;
+
+    &:focus {
+      padding-top: 12px;
+    }
+
+    & ~ .label {
+      line-height: 42px;
+    }
+
+    &:focus ~ .label {
+      top: 4px;
       line-height: initial;
     }
   }

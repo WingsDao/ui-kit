@@ -1,37 +1,12 @@
 <h1 class="page__title page-block__title ws-h1">Icons</h1>
 <ws-demo
   html='
-  <ws-icon
-    (click)="onClick()"
-    svgPath="/assets/svg/icons/close.svg"
-  ></ws-icon>
-'
->
-<p>Default size icon</p>
-  <ws-icon
-    (click)="onClick()"
-    svgPath="/assets/svg/icons/close.svg"
-  ></ws-icon> 
-</ws-demo>
-
-<ws-demo
-  html='
+  <ws-icon (click)="onClick()" svgPath="/assets/svg/icons/close.svg"></ws-icon>
   <ws-icon
     (click)="onClick()"
     svgPath="/assets/svg/icons/close.svg"
     size="m"
   ></ws-icon>
-  '
->
-  <p>Medium size icon</p>
-  <ws-icon
-    (click)="onClick()"
-    svgPath="/assets/svg/icons/close.svg"
-    size="m"
-  ></ws-icon>
-</ws-demo>
-<ws-demo
-  html='
   <ws-icon
     (click)="onClick()"
     [svgPath]="&apos;/assets/svg/icons/close.svg&apos;"
@@ -39,7 +14,13 @@
   ></ws-icon>
 '
 >
-  <p>Small size icon</p>
+  <p>Icon</p>
+  <ws-icon (click)="onClick()" svgPath="/assets/svg/icons/close.svg"></ws-icon>
+  <ws-icon
+    (click)="onClick()"
+    svgPath="/assets/svg/icons/close.svg"
+    size="m"
+  ></ws-icon>
   <ws-icon
     (click)="onClick()"
     [svgPath]="'/assets/svg/icons/close.svg'"
