@@ -1,6 +1,6 @@
 {
   "name": "@wings_platform/ui-kit-panel",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "homepage": "https://design.wings.ai/",
   "scripts": {
     "ng": "ng",
