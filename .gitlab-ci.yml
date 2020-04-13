@@ -1,5 +1,11 @@
-# Include extends for gitlab-ci
-include: 'https://raw.githubusercontent.com/WingsDao/gitlab-ci/master/templates/.extends.yml'
+# Include extends
+include:
+  - project: 'DevOps/gitlab-templates'
+    ref: master
+    file: '/extends/common.yml'
+  - project: 'DevOps/gitlab-templates'
+    ref: master
+    file: '/extends/wings.yml'
 
 stages:
   - test
@@ -47,27 +53,27 @@ Deploy prod:
   dependencies:
     - Build
 
-Deploy test:
-  variables:
-    NAMESPACE: default
-    K8S_DEPLOY_CONFIGNAME_LIST: 41_ui-kit.yaml
-    SITE_DOMAIN: ui.wings.toys
-    SITE_SSL: wingstoys-tls-secret
-    REPLICAS: 1
-  extends: .only-repo
-  stage: deploy
-  when: manual
-  before_script:
-    - echo "${K8S_DEPLOY_KUBECONFIG}" | base64 -d > ${KUBECONFIG}
-  environment:
-    name: test_ui-kit
-  script:
-    - k8s-deploy.sh delete
-    - sleep 7
-    - k8s-deploy.sh apply
-    - wait_deployed.sh "${CONTAINER_NAME}" "${WAIT_DEPLOYMENTS}"
-  dependencies:
-    - Build
+# Deploy test:
+#   variables:
+#     NAMESPACE: default
+#     K8S_DEPLOY_CONFIGNAME_LIST: 41_ui-kit.yaml
+#     SITE_DOMAIN: ui.wings.toys
+#     SITE_SSL: wingstoys-tls-secret
+#     REPLICAS: 1
+#   extends: .only-repo
+#   stage: deploy
+#   when: manual
+#   before_script:
+#     - echo "${K8S_DEPLOY_KUBECONFIG}" | base64 -d > ${KUBECONFIG}
+#   environment:
+#     name: test_ui-kit
+#   script:
+#     - k8s-deploy.sh delete
+#     - sleep 7
+#     - k8s-deploy.sh apply
+#     - wait_deployed.sh "${CONTAINER_NAME}" "${WAIT_DEPLOYMENTS}"
+#   dependencies:
+#     - Build
 
 telegram-notify:
   extends: .telegram-notify
