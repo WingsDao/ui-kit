@@ -4,7 +4,7 @@ We will be glad to welcome every participant to our open source solution.
 
 ## Getting Started
 
-Checkout for [documentation](http://desing.wings.ai) on the latest version of library.
+Checkout for [documentation](http://design.wings.ai) on the latest version of library.
 
 ### Prerequisites
 
